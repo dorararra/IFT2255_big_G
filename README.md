@@ -5,4 +5,4 @@ Le but de ce projet est  de créer un outil 'La plateforme Roundtable' pour suiv
 \VPP: sous-dossier contenant tous les fichiers Visual Paradigm<br />
 \prototype: sous-dossier contenant les artefacts de l'implémentation<br />
   \app: sous-dossier du prototype contenant le code<br />
-rapport.html (Rappel: Les images doivent s'afficher directement dans le rapport)<br />
+rapport.html

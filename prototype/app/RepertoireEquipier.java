@@ -1,14 +1,27 @@
+import java.util.ArrayList;
+
 public class RepertoireEquipier {
 
-	private Membre[] membre;
-	private Professeur[] professeur;
-	//private ToutMembre[] toutMembre;
-	private Administrateur[] administrateur;
+	private ArrayList<Membre> membre = new ArrayList<>();
+	private ArrayList<Professeur> professeur = new ArrayList<>();
+	private ArrayList<Administrateur> administrateur= new ArrayList<>();
+    private ArrayList<Equipier> equipier = new ArrayList<>();
+	public Equipier afficherListToutMembre() {
+        for (int i = 0; i < membre.size(); i++) {
+            equipier.add(membre.get(i));
+        }
+        for (int i = 0; i < professeur.size(); i++) {
+            equipier.add(professeur.get(i));
+        }
+        for (int i = 0; i < administrateur.size(); i++) {
+            equipier.add(administrateur.get(i));
+        }
+        for (int i = 0; i < equipier.size(); i++) {
+            return equipier.get(i);
 
-	public Membre[] afficherListToutMembre() {
-		// TODO - implement RepertoireEquipier.afficherListToutMembre
-		throw new UnsupportedOperationException();
-	}
+        }
+
+    }
 
 	/**
 	 * 

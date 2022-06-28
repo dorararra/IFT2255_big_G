@@ -1,2 +1,2 @@
-public class Professeur {
+public class Professeur extends Equipier {
 }

@@ -15,14 +15,15 @@ public class Activite {
 	 */
 	
 	public Boolean isArticle(String article) {
-			// Determine if this activite is an article
+        // Determine if this activite is an article
 
 
-
+    }
 	/**
 	 * 
 	 * @param outil
 	 */
+
 	public Boolean isOutil(String outil) {
 		// TODO - implement Activite.isOutil
 		throw new UnsupportedOperationException();

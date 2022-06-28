@@ -7,15 +7,25 @@ public class Equipier {
 	private String adresseCourriel;
 	private String lienWeb;
 	private Condition titre;
-	private Professeur superviseur;
-	private Interet[] interets;
+	private Superviseur superviseur;
 	private Activite[] inscrireActivite;
 	private Interet[] inscrireInteret;
 
-	/**
-	 * 
-	 * @param info
-	 */
+    public Equipier(String id, String prenom, String nomDeFamille,int numeroDeTele,String adresseCourriel, String lienWeb,
+                    Condition titre, Superviseur superviseur,  Activite[] activites, Interet[] interets ){
+        this. id = id;
+        this.prenom = prenom;
+        this.nomDeFamille = nomDeFamille;
+        this.numeroDeTele =
+    }
+
+
+
+
+    /**
+     *
+     * @param info
+     */
 	public void modifierProfil(Equipier info) {
 		// TODO - implement Equipier.modifierProfil
 		throw new UnsupportedOperationException();

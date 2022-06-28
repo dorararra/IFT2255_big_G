@@ -21,5 +21,13 @@ public class ControleurEquipier implements Controller {
 		// TODO - implement ControleurEquipier.chercherMembre
 		throw new UnsupportedOperationException();
 	}
+    /**
+     *
+     * @param info
+     */
+    @Override
+    public Boolean isValid(String[] info) {
+        return null;
+    }
 
 }

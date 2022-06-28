@@ -16,5 +16,13 @@ public class ControleurActivite implements Controller {
 		// TODO - implement ControleurActivite.operation
 		throw new UnsupportedOperationException();
 	}
+    /**
+     *
+     * @param info
+     */
+    @Override
+    public Boolean isValid(String[] info) {
+        return null;
+    }
 
 }

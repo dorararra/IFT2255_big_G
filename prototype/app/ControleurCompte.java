@@ -28,5 +28,13 @@ public class ControleurCompte implements Controller {
 		// TODO - implement ControleurCompte.getCompte
 		throw new UnsupportedOperationException();
 	}
+    /**
+     *
+     * @param info
+     */
+    @Override
+    public Boolean isValid(String[] info) {
+        return null;
+    }
 
 }

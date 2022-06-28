@@ -28,5 +28,13 @@ public class ControleurInteret implements Controller {
 		// TODO - implement ControleurInteret.modifierInteret
 		throw new UnsupportedOperationException();
 	}
+    /**
+     *
+     * @param info
+     */
+    @Override
+    public Boolean isValid(String[] info) {
+        return null;
+    }
 
 }

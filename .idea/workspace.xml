@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf88d774-0d10-4944-be56-c6bff708eec7" name="Changes" comment="" />
+    <list default="true" id="bf88d774-0d10-4944-be56-c6bff708eec7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/Gerer des souscriptions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/consulter un intérêt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/consulter un membre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/consulter une activité.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/gérer des membres.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/gérer un intérêt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/gérer une activité.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/menu principal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme activité/photo/mon compte.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

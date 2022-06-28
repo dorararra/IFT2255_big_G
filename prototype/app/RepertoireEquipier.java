@@ -2,7 +2,7 @@ public class RepertoireEquipier {
 
 	private Membre[] membre;
 	private Professeur[] professeur;
-	private ToutMembre[] toutMembre;
+	//private ToutMembre[] toutMembre;
 	private Administrateur[] administrateur;
 
 	public Membre[] afficherListToutMembre() {

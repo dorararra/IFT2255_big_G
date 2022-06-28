@@ -1,2 +1,2 @@
-public class Membre {
+public class Membre extends Equipier {
 }

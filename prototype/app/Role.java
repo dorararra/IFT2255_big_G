@@ -1,11 +1,9 @@
 public enum Role {
-    superviseur,
-    administrateur,
-    membre;
-    private  String code;
-    private  String description;
+	superviseur,
+	administrateur,
+	membre;
 
-
-
+	private String code;
+	private String description;
 
 }

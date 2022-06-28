@@ -1,7 +1,5 @@
 public enum CompteStatus {
-    enAttente,
-    valide,
-    suspendu,
-
-
+	enAttente,
+	valide,
+	suspendu
 }

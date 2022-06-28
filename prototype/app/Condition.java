@@ -1,6 +1,6 @@
 public enum Condition {
-    maitrise,
-    doctorat,
-    postdoc,
-    professeur
+	maitrise,
+	doctorat,
+	PostDoc,
+	professeur
 }

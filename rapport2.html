@@ -380,59 +380,59 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           </tr>
           <tr>
             <td align="center"><b>Révision</b></td>
-            <td align="center">5%</td>
-            <td align="center">5%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">20%</td>
+            <td align="center">20%</td>
+            <td align="center">40%</td>
+            <td align="center">20%</td>
           </tr>
           <tr>
             <td align="center"><b>Analyse</b></td>
-            <td align="center">5%</td>
-            <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">20%</td>
+            <td align="center">30%</td>
+            <td align="center">30%</td>
+            <td align="center">20%</td>
           </tr>
           <tr>
             <td align="center"><b>Diagramme d'activités</b></td>
-            <td align="center">5%</td>
+            <td align="center">70%</td>
             <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">10%</td>
+            <td align="center">10%</td>
           </tr>
           <tr>
             <td align="center"><b>Diagramme de classe</b></td>
-            <td align="center">5%</td>
             <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">10%</td>
+            <td align="center">10%</td>
+            <td align="center">70%</td>
           </tr>
           <tr>
             <td align="center"><b>Diagramme de séquence</b></td>
-            <td align="center">5%</td>
             <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">10%</td>
+            <td align="center">70%</td>
+            <td align="center">10%</td>
           </tr>
           <tr>
             <td align="center"><b>Prototype fonctionnel</b></td>
-            <td align="center">5%</td>
             <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">70%</td>
+            <td align="center">10%</td>
+            <td align="center">10%</td>
           </tr>
           <tr>
             <td align="center"><b>Rapports</b></td>
-            <td align="center">5%</td>
-            <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">20%</td>
+            <td align="center">20%</td>
+            <td align="center">40%</td>
+            <td align="center">20%</td>
           </tr>
           <tr>
             <td align="center"><b>Git</b></td>
-            <td align="center">5%</td>
-            <td align="center">10%</td>
-            <td align="center">5%</td>
-            <td align="center">80%</td>
+            <td align="center">20%</td>
+            <td align="center">20%</td>
+            <td align="center">25%</td>
+            <td align="center">35%</td>
           </tr>
         </table>
       </section>
@@ -1009,7 +1009,13 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
         <h2 id="conception" class="section-title">Conception</h2>
         <div>
           <h2>Justification des choix du design</h2>
-
+           <p><b>Pour l'utilisation de l'abstraction :</b> nous avons résumé certaines classes ayant les mêmes attributs, 
+            en tirer les attributs communs et les utiliser comme classe parente abstraite.
+            Par exemple, Activite est la classe parente d'Article, Outil et Projet, qui ont des attributs communs : id et title.</p>
+            <p><b>Pour l'utilisation du couplage :</b> nous avons associé certaines classes qui sont fortement dépendantes les unes des autres en utilisant &lt;&lt;use&gt;&gt;. 
+            Par exemple, la classe Condition ne peut être utilisée indépendamment de la classe Equipier, et la classe ArticleStatus ne peut être utilisée indépendamment de la classe Article.</p>
+            <p><b>Pour l'utilisation de la cohésion :</b>nous avons regroupé les opérations en fonction de l'exécuteur, de l'ordre d'exécution, des données utilisées et les avons mises dans une même classe. 
+                Par exemple : pour l'administrateur, assigner et modifier les rôles, supprimer les activités et suspendre et réactiver les comptes sont ses actions.</p>
         </div>
         <div>
           <h2>Design détaillé</h2>

@@ -60,18 +60,6 @@ public class Equipier {
 
 
 
-
-
-
-    /**
-     *
-     * @param info
-     */
-	public void modifierProfil(Equipier info) {
-		// TODO - implement Equipier.modifierProfil
-		throw new UnsupportedOperationException();
-	}
-
 	public Boolean avoirNotification() {
 		// TODO - implement Equipier.avoirNotification
 		throw new UnsupportedOperationException();

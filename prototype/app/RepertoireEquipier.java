@@ -6,7 +6,7 @@ public class RepertoireEquipier {
 	private ArrayList<Superviseur> superviseur = new ArrayList<>();
 	private ArrayList<Administrateur> administrateur= new ArrayList<>();
     private ArrayList<Equipier> equipier = new ArrayList<>();
-    public Equipier[] getTousMembre(){
+    public void getTousMembre(){
         for (int i = 0; i < membre.size(); i++) {
             equipier.add(membre.get(i));
         }
@@ -24,6 +24,7 @@ public class RepertoireEquipier {
             return equipier.get(i);
 
         }
+        return  null;
 
     }
 
@@ -33,8 +34,6 @@ public class RepertoireEquipier {
 	 */
 	public void afficherProfilComplet(Equipier membre) {
         System.out.println(membre.getPrenom() + membre.getNomDeFamille());
-
-
 	}
 
 	/**
@@ -44,15 +43,16 @@ public class RepertoireEquipier {
 	 */
 	public void chercherMembre(String prenom, String nom) {
 		for(int i =0; i<equipier.size();i++){
-            if(equipier.get(i).getPrenom() == prenom){
-                for(int j = 0;j<equipier.size();j++){
-                    if(equipier.get(j).getNomDeFamille() == nom){
+            if((equipier.get(i).getPrenom() == prenom) && (equipier.get(i).getNomDeFamille() == nom))
+                    {
+                        System.out.println("Nom Complet: "+equipier.get(i).getPrenom()+ equipier.get(i).getNomDeFamille());
+                        System.out.println("Adresse Courriel: "+equipier.get(i).getAdresseCourriel() );
+                        System.out.println("Intérêt: " + equipier.get(i).getInscrireInteret());
 
                     }
 
                 }
             }
         }
-	}
 
-}
+

@@ -1,4 +1,4 @@
-public class Equipier {
+public abstract class Equipier {
 
 	private String id;
 	private String prenom;
@@ -7,12 +7,11 @@ public class Equipier {
 	private String adresseCourriel;
 	private String lienWeb;
 	private Condition titre;
-	private Superviseur superviseur;
 	private Activite[] inscrireActivite;
 	private Interet[] inscrireInteret;
 
     public Equipier(String id, String prenom, String nomDeFamille,int numeroDeTele,String adresseCourriel, String lienWeb,
-                    Condition titre, Superviseur superviseur,  Activite[] inscrireActivite, Interet[] inscrireInteret ){
+                    Condition titre,  Activite[] inscrireActivite, Interet[] inscrireInteret ){
         this.id = id;
         this.prenom = prenom;
         this.nomDeFamille = nomDeFamille;
@@ -20,7 +19,7 @@ public class Equipier {
         this.adresseCourriel = adresseCourriel;
         this.lienWeb = lienWeb;
         this.titre = titre;
-        this.superviseur = superviseur;
+
         this.inscrireActivite = inscrireActivite;
         this.inscrireInteret = inscrireInteret;
     }
@@ -48,9 +47,6 @@ public class Equipier {
 
     public Condition getTitre(){return this.titre;}
     public  void setTitre(Condition titre){this.titre = titre;}
-
-    public Superviseur getSuperviseur(){return this.superviseur;}
-    public void setSuperviseur(Superviseur superviseur){this.superviseur = superviseur;}
 
     public  Interet[] getInscrireInteret(){return this.inscrireInteret;}
     public void setInscrireInteret(Interet[] inscrireInteret){this.inscrireInteret = inscrireInteret;}

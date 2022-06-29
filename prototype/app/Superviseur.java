@@ -1,6 +1,13 @@
 public class Superviseur extends Equipier {
 
-	private Null superviseur;
+    public Superviseur(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel,
+                       String lienWeb, Condition titre,Activite[] inscrireActivite, Interet[] inscrireInteret) {
+        super(id, prenom, nomDeFamille, numeroDeTele, adresseCourriel, lienWeb, titre, inscrireActivite, inscrireInteret);
+
+    }
+
+
+
 
 	/**
 	 * 

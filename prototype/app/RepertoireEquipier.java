@@ -7,24 +7,19 @@ public class RepertoireEquipier {
 	private ArrayList<Administrateur> administrateur= new ArrayList<>();
     private ArrayList<Equipier> equipier = new ArrayList<>();
     public void getTousMembre(){
-        for (int i = 0; i < membre.size(); i++) {
-            equipier.add(membre.get(i));
-        }
-        for (int i = 0; i < superviseur.size(); i++) {
-            equipier.add(superviseur.get(i));
-        }
-        for (int i = 0; i < administrateur.size(); i++) {
-            equipier.add(administrateur.get(i));
-        }
+        equipier.addAll(membre);
+        equipier.addAll(superviseur);
+        equipier.addAll(administrateur);
 
     }
-	public Equipier afficherListToutMembre() {
+	public void afficherListToutMembre() {
         this.getTousMembre();
-        for (int i = 0; i < equipier.size(); i++) {
-            return equipier.get(i);
+        int n = 0;
+        for (Equipier mem : equipier) {
+            n++;
+            System.out.println(n + " . " + mem);
 
         }
-        return  null;
 
     }
 
@@ -42,16 +37,15 @@ public class RepertoireEquipier {
 	 * @param nom
 	 */
 	public void chercherMembre(String prenom, String nom) {
-		for(int i =0; i<equipier.size();i++){
-            if((equipier.get(i).getPrenom() == prenom) && (equipier.get(i).getNomDeFamille() == nom))
-                    {
-                        System.out.println("Nom Complet: "+equipier.get(i).getPrenom()+ equipier.get(i).getNomDeFamille());
-                        System.out.println("Adresse Courriel: "+equipier.get(i).getAdresseCourriel() );
-                        System.out.println("Intérêt: " + equipier.get(i).getInscrireInteret());
+        for (Equipier mem : equipier) {
+            if ((mem.getPrenom() == prenom) && (mem.getNomDeFamille() == nom)) {
+                System.out.println("Nom Complet: " + mem.getPrenom() + mem.getNomDeFamille());
+                System.out.println("Adresse Courriel: " + mem.getAdresseCourriel());
+                System.out.println("Intérêt: " + mem.getInscrireInteret());
 
-                    }
+            }
 
-                }
+        }
             }
         }
 

@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Membre extends Equipier {
     private Superviseur superviseur;
-    public Membre(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb, Condition titre, Superviseur superviseur, Activite[] inscrireActivite, Interet[] inscrireInteret) {
+    public Membre(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb, Condition titre, Superviseur superviseur, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret) {
         super(id, prenom, nomDeFamille, numeroDeTele, adresseCourriel, lienWeb, titre,  inscrireActivite, inscrireInteret);
          setSuperviseur(superviseur);
     }

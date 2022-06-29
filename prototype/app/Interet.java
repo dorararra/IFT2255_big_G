@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Interet {
+public class Interet extends RepertoireInteret{
 
     private String id;
     private String titre;

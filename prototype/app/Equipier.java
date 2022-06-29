@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Equipier {
 
 	private String id;
@@ -7,11 +9,12 @@ public abstract class Equipier {
 	private String adresseCourriel;
 	private String lienWeb;
 	private Condition titre;
-	private Activite[] inscrireActivite;
-	private Interet[] inscrireInteret;
+	private ArrayList<Activite> inscrireActivite = new ArrayList<>();
+	private ArrayList<Interet> inscrireInteret = new ArrayList<>();
+    private int numNotification;
 
-    public Equipier(String id, String prenom, String nomDeFamille,int numeroDeTele,String adresseCourriel, String lienWeb,
-                    Condition titre,  Activite[] inscrireActivite, Interet[] inscrireInteret ){
+    public Equipier(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb,
+                    Condition titre, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret){
         this.id = id;
         this.prenom = prenom;
         this.nomDeFamille = nomDeFamille;
@@ -19,9 +22,9 @@ public abstract class Equipier {
         this.adresseCourriel = adresseCourriel;
         this.lienWeb = lienWeb;
         this.titre = titre;
-
-        this.inscrireActivite = inscrireActivite;
         this.inscrireInteret = inscrireInteret;
+        this.inscrireActivite = inscrireActivite;
+        this.numNotification = numNotification;
     }
     public String getId(){return this.id;}
     /**
@@ -48,26 +51,44 @@ public abstract class Equipier {
     public Condition getTitre(){return this.titre;}
     public  void setTitre(Condition titre){this.titre = titre;}
 
-    public  Interet[] getInscrireInteret(){return this.inscrireInteret;}
-    public void setInscrireInteret(Interet[] inscrireInteret){this.inscrireInteret = inscrireInteret;}
+    public void setInscrireActivite(ArrayList<Activite> inscrireActivite) {
+        this.inscrireActivite = inscrireActivite;
+    }
 
-    public Activite[] getInscrireActivite(){return  this.inscrireActivite;}
-    public  void setInscrireActivite(Activite[] inscrireActivite){this.inscrireActivite = inscrireActivite;}
+    public ArrayList<Interet> getInscrireInteret() {
+        return inscrireInteret;
+    }
 
+    public void setInscrireInteret(ArrayList<Interet> inscrireInteret) {
+        this.inscrireInteret = inscrireInteret;
+    }
 
+    public ArrayList<Activite> getInscrireActivite() {
+        return inscrireActivite;
+    }
 
-	public Boolean avoirNotification() {
-		// TODO - implement Equipier.avoirNotification
-		throw new UnsupportedOperationException();
+    public int getNumNotification(){return this.numNotification;}
+    public void setNumNotification(int numNotification){this.numNotification = numNotification;}
+
+    public Boolean avoirNotification() {
+		if(this.numNotification == 0){
+            System.out.println("Vous n'avez pas notification.");
+            return false;
+        }
+        if(this.numNotification != 0){
+            System.out.println("Vous avez "+ this.numNotification + "notification");
+            return true;
+        }
+        return  null;
 	}
+
 
 	/**
 	 * 
 	 * @param activite
 	 */
-	public void creerActivite(String activite) {
-		// TODO - implement Equipier.creerActivite
-		throw new UnsupportedOperationException();
+	public void creerActivite(Activite activite) {
+
 	}
 
 	/**
@@ -75,8 +96,7 @@ public abstract class Equipier {
 	 * @param activite
 	 */
 	public void inscrireActivite(Activite activite) {
-		// TODO - implement Equipier.inscrireActivite
-		throw new UnsupportedOperationException();
+		this.inscrireActivite.add(activite);
 	}
 
 	/**
@@ -102,17 +122,8 @@ public abstract class Equipier {
 	 * @param interet
 	 */
 	public void inscrireInteret(Interet interet) {
-		// TODO - implement Equipier.inscrireInteret
-		throw new UnsupportedOperationException();
+		this.inscrireInteret.add(interet);
 	}
 
-	/**
-	 * 
-	 * @param activite
-	 */
-	public void modifierActivite(Activite activite) {
-		// TODO - implement Equipier.modifierActivite
-		throw new UnsupportedOperationException();
-	}
 
 }

@@ -24,6 +24,41 @@ public class Equipier {
         this.inscrireActivite = inscrireActivite;
         this.inscrireInteret = inscrireInteret;
     }
+    public String getId(){return this.id;}
+    /**
+     *
+     * @param id
+     */
+    public void setId(String id){this.id = id;}
+
+    public String getPrenom(){return this.prenom;}
+    public void setPrenom(String prenom){this.prenom = prenom;}
+
+    public String getNomDeFamille(){return this.nomDeFamille;}
+    public void setNomDeFamille(String nomDeFamille){this.nomDeFamille = nomDeFamille;}
+
+    public  int  getNumeroDeTele(){return this.numeroDeTele;}
+    public void setNumeroDeTele(int numeroDeTele){this.numeroDeTele = numeroDeTele;}
+
+    public String getAdresseCourriel(){return this.adresseCourriel;}
+    public void setAdresseCourriel(String adresseCourriel){this.adresseCourriel = adresseCourriel;}
+
+    public String getLienWeb(){return  this.lienWeb;}
+    public  void setLienWeb(String lienWeb){this.lienWeb = lienWeb;}
+
+    public Condition getTitre(){return this.titre;}
+    public  void setTitre(Condition titre){this.titre = titre;}
+
+    public Superviseur getSuperviseur(){return this.superviseur;}
+    public void setSuperviseur(Superviseur superviseur){this.superviseur = superviseur;}
+
+    public  Interet[] getInscrireInteret(){return this.inscrireInteret;}
+    public void setInscrireInteret(Interet[] inscrireInteret){this.inscrireInteret = inscrireInteret;}
+
+    public Activite[] getInscrireActivite(){return  this.inscrireActivite;}
+    public  void setInscrireActivite(Activite[] inscrireActivite){this.inscrireActivite = inscrireActivite;}
+
+
 
 
 

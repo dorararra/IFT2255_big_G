@@ -12,11 +12,17 @@ public class Equipier {
 	private Interet[] inscrireInteret;
 
     public Equipier(String id, String prenom, String nomDeFamille,int numeroDeTele,String adresseCourriel, String lienWeb,
-                    Condition titre, Superviseur superviseur,  Activite[] activites, Interet[] interets ){
-        this. id = id;
+                    Condition titre, Superviseur superviseur,  Activite[] inscrireActivite, Interet[] inscrireInteret ){
+        this.id = id;
         this.prenom = prenom;
         this.nomDeFamille = nomDeFamille;
-        this.numeroDeTele =
+        this.numeroDeTele =numeroDeTele;
+        this.adresseCourriel = adresseCourriel;
+        this.lienWeb = lienWeb;
+        this.titre = titre;
+        this.superviseur = superviseur;
+        this.inscrireActivite = inscrireActivite;
+        this.inscrireInteret = inscrireInteret;
     }
 
 

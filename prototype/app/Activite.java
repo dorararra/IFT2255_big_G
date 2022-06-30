@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public class Activite {
 
 	private String id;
 	private String Titre;
-	private Interet[] interetLie;
+	private ArrayList<Interet> interetsLie;
 
 	public Activite[] afficherList() {
 		// Show list of activite

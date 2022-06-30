@@ -1,4 +1,6 @@
-public class Equipier {
+import java.util.ArrayList;
+
+public abstract class Equipier {
 
 	private String id;
 	private String prenom;
@@ -7,32 +9,86 @@ public class Equipier {
 	private String adresseCourriel;
 	private String lienWeb;
 	private Condition titre;
-	private Professeur superviseur;
-	private Interet[] interets;
-	private Activite[] inscrireActivite;
-	private Interet[] inscrireInteret;
+	private ArrayList<Activite> inscrireActivite = new ArrayList<>();
+	private ArrayList<Interet> inscrireInteret = new ArrayList<>();
+    private int numNotification;
 
-	/**
-	 * 
-	 * @param info
-	 */
-	public void modifierProfil(Equipier info) {
-		// TODO - implement Equipier.modifierProfil
-		throw new UnsupportedOperationException();
+    public Equipier(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb,
+                    Condition titre, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret){
+        this.id = id;
+        this.prenom = prenom;
+        this.nomDeFamille = nomDeFamille;
+        this.numeroDeTele =numeroDeTele;
+        this.adresseCourriel = adresseCourriel;
+        this.lienWeb = lienWeb;
+        this.titre = titre;
+        this.inscrireInteret = inscrireInteret;
+        this.inscrireActivite = inscrireActivite;
+        this.numNotification = numNotification;
+    }
+    public String getId(){return this.id;}
+    /**
+     *
+     * @param id
+     */
+    public void setId(String id){this.id = id;}
+
+    public String getPrenom(){return this.prenom;}
+    public void setPrenom(String prenom){this.prenom = prenom;}
+
+    public String getNomDeFamille(){return this.nomDeFamille;}
+    public void setNomDeFamille(String nomDeFamille){this.nomDeFamille = nomDeFamille;}
+
+    public  int  getNumeroDeTele(){return this.numeroDeTele;}
+    public void setNumeroDeTele(int numeroDeTele){this.numeroDeTele = numeroDeTele;}
+
+    public String getAdresseCourriel(){return this.adresseCourriel;}
+    public void setAdresseCourriel(String adresseCourriel){this.adresseCourriel = adresseCourriel;}
+
+    public String getLienWeb(){return  this.lienWeb;}
+    public  void setLienWeb(String lienWeb){this.lienWeb = lienWeb;}
+
+    public Condition getTitre(){return this.titre;}
+    public  void setTitre(Condition titre){this.titre = titre;}
+
+    public void setInscrireActivite(ArrayList<Activite> inscrireActivite) {
+        this.inscrireActivite = inscrireActivite;
+    }
+
+    public ArrayList<Interet> getInscrireInteret() {
+        return inscrireInteret;
+    }
+
+    public void setInscrireInteret(ArrayList<Interet> inscrireInteret) {
+        this.inscrireInteret = inscrireInteret;
+    }
+
+    public ArrayList<Activite> getInscrireActivite() {
+        return inscrireActivite;
+    }
+
+    public int getNumNotification(){return this.numNotification;}
+    public void setNumNotification(int numNotification){this.numNotification = numNotification;}
+
+    public Boolean avoirNotification() {
+		if(this.numNotification == 0){
+            System.out.println("Vous n'avez pas notification.");
+            return false;
+        }
+        if(this.numNotification != 0){
+            System.out.println("Vous avez "+ this.numNotification + "notification");
+            return true;
+        }
+        return  null;
 	}
 
-	public Boolean avoirNotification() {
-		// TODO - implement Equipier.avoirNotification
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * 
 	 * @param activite
 	 */
-	public void creerActivite(String activite) {
-		// TODO - implement Equipier.creerActivite
-		throw new UnsupportedOperationException();
+	public void creerActivite(Activite activite) {
+
 	}
 
 	/**
@@ -40,8 +96,7 @@ public class Equipier {
 	 * @param activite
 	 */
 	public void inscrireActivite(Activite activite) {
-		// TODO - implement Equipier.inscrireActivite
-		throw new UnsupportedOperationException();
+		this.inscrireActivite.add(activite);
 	}
 
 	/**
@@ -67,17 +122,8 @@ public class Equipier {
 	 * @param interet
 	 */
 	public void inscrireInteret(Interet interet) {
-		// TODO - implement Equipier.inscrireInteret
-		throw new UnsupportedOperationException();
+		this.inscrireInteret.add(interet);
 	}
 
-	/**
-	 * 
-	 * @param activite
-	 */
-	public void modifierActivite(Activite activite) {
-		// TODO - implement Equipier.modifierActivite
-		throw new UnsupportedOperationException();
-	}
 
 }

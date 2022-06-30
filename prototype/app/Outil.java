@@ -6,11 +6,12 @@ public class Outil extends Activite {
 	private String lienRepertoire;
 	private Equipier responsable;
 	private ArrayList<Equipier> equipiers = new ArrayList<>();
+    private ArrayList<Equipier> collaborateurs = new ArrayList<>();
 	private ArrayList<Article> articles = new ArrayList<>();
 	private ArrayList<String> interetLie = new ArrayList<>();
 	private String description;
     public  Outil(String id,String titre, ArrayList<Interet> interetsLie,Double version, String lienRepertoire,
-                  Equipier responsable,ArrayList<Equipier> equipiers ,ArrayList<Article> articles,ArrayList<String> interetLie){
+                  Equipier responsable,ArrayList<Equipier> equipiers ,ArrayList<Equipier> collaborateurs,ArrayList<Article> articles,ArrayList<String> interetLie){
         super(id, titre, interetsLie);
         this.version = version;
         this.lienRepertoire =lienRepertoire;
@@ -18,7 +19,7 @@ public class Outil extends Activite {
         this.equipiers = equipiers;
         this.articles = articles;
         this.interetLie = interetLie;
-
+        this.collaborateurs = collaborateurs;
 
     }
 
@@ -76,5 +77,19 @@ public class Outil extends Activite {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ArrayList<Equipier> getCollaborateurs() {
+        return collaborateurs;
+    }
+
+    public void setCollaborateurs(ArrayList<Equipier> collaborateurs) {
+        this.collaborateurs = collaborateurs;
+    }
+
+    @Override
+    public void afficheFicheComplet(Activite activite){
+        System.out.println("Nom: "+this.getTitre()+ "Description: "+this.getDescription()+ "Version: "+ this.version
+        + "Collaborateurs: "+ this.getCollaborateurs()+ "Lien du Répertoire: "+ this.getLienRepertoire() + "Article liés à l'outil: " + this.getArticles());
     }
 }

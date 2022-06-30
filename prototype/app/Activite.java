@@ -1,52 +1,49 @@
 import java.util.ArrayList;
 
-public class Activite {
+public abstract class Activite {
 
 	private String id;
-	private String Titre;
+	private String titre;
 	private ArrayList<Interet> interetsLie;
-
-	public Activite[] afficherList() {
-		// Show list of activite
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param article
-	 */
-	
-	public Boolean isArticle(String article) {
-        // Determine if this activite is an article
-
-
+    public Activite(String id,String titre, ArrayList<Interet> interetsLie){
+        this.id = id;
+        this.titre = titre;
+        this.interetsLie = interetsLie;
     }
-	/**
-	 * 
-	 * @param outil
-	 */
 
-	public Boolean isOutil(String outil) {
-		// TODO - implement Activite.isOutil
-		throw new UnsupportedOperationException();
-	}
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitre() {
+        return this.titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public ArrayList<Interet> getInteretsLie() {
+        return this.interetsLie;
+    }
+
+    public void setInteretsLie(ArrayList<Interet> interetsLie) {
+        this.interetsLie = interetsLie;
+    }
+
 
 	/**
-	 * 
-	 * @param projet
-	 */
-	public Boolean isProjet(String projet) {
-		// TODO - implement Activite.isProjet
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
+	 *
 	 * @param activite
 	 */
-	public Article afficheFicheComplet(String activite) {
-		// TODO - implement Activite.afficheFicheComplet
-		throw new UnsupportedOperationException();
-	}
+	public void afficheFicheComplet(Activite activite) {
+
+        }
+
+
 
 }

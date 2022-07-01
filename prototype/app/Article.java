@@ -41,7 +41,7 @@ public class Article extends Activite {
 
 
     public ArrayList<Equipier> getAuteurs() {
-        return auteurs;
+        return auteurs.;
     }
 
     public void setAuteurs(ArrayList<Equipier> auteurs) {

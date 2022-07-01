@@ -76,4 +76,41 @@ public class RepertoireActivite {
             System.out.println(n + " . " + projet);
         }
     }
-}
+    public void chercherArticle(String titreOuAuteurOuMotcle){
+        // article relatif
+        ArrayList<Article>articleRelatif = new ArrayList<>();
+        for (Article article : articles) {
+            if (titreOuAuteurOuMotcle == article.getTitre() || article.getAuteurs().contains(titreOuAuteurOuMotcle)
+                    || article.getMotcles().contains(titreOuAuteurOuMotcle)) {
+                articleRelatif.add(article);
+            }
+            if (articleRelatif.size() != 0) {
+                for (int j = 0; j < articleRelatif.size(); j++) {
+                    System.out.println(j + 1 + " . " + articleRelatif.get(j).getTitre() + " " + articleRelatif.get(j).getAuteurs() +
+                            articleRelatif.get(j).getDatePublication());
+
+                }
+            }
+            else{
+                    System.out.println("Rien à afficher.");
+                }
+            }
+
+        }
+    public void chercherProjet(String responsable){
+        // projet relatif
+        ArrayList<Projet>projetRelatif = new ArrayList<>();
+        for(Projet projet : projets){
+            if(responsable == (projet.getResponsable().getPrenom()+" "+projet.getResponsable().getNomDeFamille()){
+                projetRelatif.add(projet);
+
+            }
+        }
+
+
+
+
+    }
+
+        }
+

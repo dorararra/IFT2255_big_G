@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Menu implements Serializable {
@@ -118,7 +119,7 @@ public class Menu implements Serializable {
 						printMenu();
 						break;
 					case "9":
-						fonctionSpe();
+						fonctionSpeciale();
 						printMenu();
 						break;
 					case "0":
@@ -134,48 +135,101 @@ public class Menu implements Serializable {
 		}
 	}
 
+	/**
+	 * Consulter le profil complet d’un membre par liste ou chercher un membre par son nom complet
+	 */
 	public void consulterMembre() {
-		// TODO - implement Menu.consultMembre
-		throw new UnsupportedOperationException();
-	}
+		printMembreMenu();
+		String id = null;
+		Scanner scanner = new Scanner(System.in);
+		OUT:
+		while (scanner.hasNextLine()) {
+			String order = scanner.nextLine();
+			if (!order.isEmpty()) {
+				switch (order) {
+					// Consulter le profil complet d’un membre par liste
+					case "1":
+						System.out.println("Entrez le numéro du membre vous voulez consulter, ou pressez 0 pour revenir au menu.");
+						break;
+					// Chercher un membre par son nom complet
+					case "2":
+						System.out.println("Entrez le non complet de membre:");
+						Scanner nomComplet = new Scanner(System.in);
+						String codeId = nomComplet.nextLine();
+						while (nomComplet.hasNextLine()){
+							if (!codeId.isEmpty()) {
+								if (codeId.equals("0")){
+									printMenu();
+									break OUT;
+								}
+								if (controleurEquipier.chercherEquipier(codeId)){
+									//TODO
+									break;
 
-	public void consulterActivite() {
-		// TODO - implement Menu.consultActivite
-		throw new UnsupportedOperationException();
-	}
+									break;
+									case "0":
+										printMenu();
+										break;
+									default:
+										System.out.println("Aucun résultat. Réessayez SVP, ou pressez 0 pour revenir au menu.");
+										break;
+								}
+							}
+						}
+				}
 
-	public void chercherActivite() {
-		// TODO - implement Menu.chercherActivite
-		throw new UnsupportedOperationException();
-	}
+				private void printMembreMenu() {
+					System.out.println("1. Afficher la liste\n"+
+							"2. Chercher par son nom complet\n"+
+							"3. Pressez 0 pour revenir au niveau précédent du menu.");
+				}
 
-	public void consulterMonActivite() {
-		// TODO - implement Menu.consulterMonActivite
-		throw new UnsupportedOperationException();
-	}
+				public void consulterMembreListe(){
+					throw new UnsupportedOperationException();
+				}
 
-	public void consulterInteret() {
-		// TODO - implement Menu.consulterMonActivite
-		throw new UnsupportedOperationException();
-	}
+				public void chercherMembre(){
+					throw new UnsupportedOperationException();
+				}
 
-	public void gererActivite() {
-		// TODO - implement Menu.gererActivite
-		throw new UnsupportedOperationException();
-	}
+				public void consulterActivite() {
+					// TODO - implement Menu.consultActivite
+					throw new UnsupportedOperationException();
+				}
 
-	public void gererSouscription() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
-	}
+				public void chercherActivite() {
+					// TODO - implement Menu.chercherActivite
+					throw new UnsupportedOperationException();
+				}
 
-	public void gererCompte() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
-	}
+				public void consulterMonActivite() {
+					// TODO - implement Menu.consulterMonActivite
+					throw new UnsupportedOperationException();
+				}
 
-	public void fonctionSpe() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
-	}
-}
+				public void consulterInteret() {
+					// TODO - implement Menu.consulterMonActivite
+					throw new UnsupportedOperationException();
+				}
+
+				public void gererActivite() {
+					// TODO - implement Menu.gererActivite
+					throw new UnsupportedOperationException();
+				}
+
+				public void gererSouscription() {
+					// TODO - implement Menu.gererSouscription
+					throw new UnsupportedOperationException();
+				}
+
+				public void gererCompte() {
+					// TODO - implement Menu.gererSouscription
+					throw new UnsupportedOperationException();
+				}
+
+				public void fonctionSpeciale() {
+					// TODO - implement Menu.gererSouscription
+					throw new UnsupportedOperationException();
+				}
+
+			}

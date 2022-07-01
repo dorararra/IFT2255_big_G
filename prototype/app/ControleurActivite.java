@@ -1,10 +1,37 @@
-public class ControleurActivite implements Controller {
+import java.io.Serializable;
 
-	private RepertoireActivite repertoire;
+public class ControleurActivite implements Serializable, Controller {
+	private Article article;
+	private Outil outil;
+	private Projet projet;
 
-	public Boolean afficherList() {
-		// TODO - implement ControleurActivite.afficherList
-		throw new UnsupportedOperationException();
+	private RepertoireActivite repertoire = new RepertoireActivite();
+
+	public void ajouteArticle(){
+		repertoire.ajouteArticle(article);
+		System.out.println("Article a déjà ajouté");
+		System.out.println("ID: "+article.getId());
+	}
+	public  void ajouteProjet(){
+		repertoire.ajouteProjet(projet);
+		System.out.println("Projet a déjà ajouté");
+		System.out.println("ID: "+ projet.getId());
+	}
+	public  void ajouteOutil(){
+		repertoire. ajouteOutil(outil);
+		System.out.println("Outil a déjà ajouté ");
+		System.out.println("ID: "+ outil.getId());
+	}
+
+
+	public void afficherListDeArticle() {
+		repertoire.afficherListToutArticle();
+	}
+	public void afficherListToutOutil(){
+		repertoire.afficherListToutOutil();
+	}
+	public void afficherListToutProjet(){
+		repertoire.afficherListToutProjet();
 	}
 
 	public Boolean afficherFicheComplet() {
@@ -16,13 +43,13 @@ public class ControleurActivite implements Controller {
 		// TODO - implement ControleurActivite.operation
 		throw new UnsupportedOperationException();
 	}
-    /**
-     *
-     * @param info
-     */
-    @Override
-    public Boolean isValid(String[] info) {
-        return null;
-    }
+	/**
+	 *
+	 * @param info
+	 */
+	@Override
+	public Boolean isValid(String[] info) {
+		return null;
+	}
 
 }

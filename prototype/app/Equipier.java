@@ -12,6 +12,7 @@ public abstract class Equipier {
 	private ArrayList<Activite> inscrireActivite = new ArrayList<>();
 	private ArrayList<Interet> inscrireInteret = new ArrayList<>();
     private int numNotification;
+    private Compte compte;
 
     public Equipier(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb,
                     Condition titre, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret){
@@ -69,6 +70,14 @@ public abstract class Equipier {
 
     public int getNumNotification(){return this.numNotification;}
     public void setNumNotification(int numNotification){this.numNotification = numNotification;}
+
+    public Compte getCompte() {
+        return compte;
+    }
+
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
 
     public Boolean avoirNotification() {
 		if(this.numNotification == 0){

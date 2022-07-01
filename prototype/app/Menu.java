@@ -149,7 +149,9 @@ public class Menu implements Serializable {
 				switch (order) {
 					// Consulter le profil complet d’un membre par liste
 					case "1":
+						controleurEquipier.
 						System.out.println("Entrez le numéro du membre vous voulez consulter, ou pressez 0 pour revenir au menu.");
+
 						break;
 					// Chercher un membre par son nom complet
 					case "2":
@@ -166,7 +168,6 @@ public class Menu implements Serializable {
 									//TODO
 									break;
 
-									break;
 									case "0":
 										printMenu();
 										break;

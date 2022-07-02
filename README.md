@@ -1,7 +1,7 @@
 # Roundtable
-###Big_G
+### Notre équipe: Big_G
 Mingze Li, Qianyun Shen, Duola Peng, Shilong Zhou
-###But de projet
+### But de projet
 Le but de ce projet est de créer un outil 'La plateforme Roundtable' pour suivre, visualiser, gérer les membres et les activités, etc.<br />
 
 \images: sous-dossier contenant toutes les images, y compris les diagrammes d'activités, la diagramme de classe et les diagrammes de séquence.<br />
@@ -10,7 +10,7 @@ Le but de ce projet est de créer un outil 'La plateforme Roundtable' pour suivr
 &nbsp; \app: sous-dossier du prototype contenant le code.<br />
 \rapport.html: rapport de l'analyse approfondie du problème, la conception et une première implémentation<br />
 
-###Manuel d'utilisation
+### Manuel d'utilisation
 1. Pour accéder à la plateforme Roundtable, vous devez exécuter le fichier 'RoundTable.java'.
 2. Afin de vous tester les codes, nous vous donnons une adresse courriel et un mot de passe pour vous connecter au système: 
 - adresse courriel: ###

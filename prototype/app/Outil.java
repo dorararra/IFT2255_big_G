@@ -88,7 +88,7 @@ public class Outil extends Activite {
     }
 
     @Override
-    public void afficheFicheComplet(Activite activite){
+    public void afficheFicheComplet(){
         System.out.println("Nom: "+this.getTitre()+ "Description: "+this.getDescription()+ "Version: "+ this.version
         + "Collaborateurs: "+ this.getCollaborateurs()+ "Lien du Répertoire: "+ this.getLienRepertoire() + "Article liés à l'outil: " + this.getArticles());
     }

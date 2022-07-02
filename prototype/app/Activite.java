@@ -40,7 +40,7 @@ public abstract class Activite {
 	 *
 	 * @param activite
 	 */
-	public void afficheFicheComplet(Activite activite) {
+	public void afficheFicheComplet() {
 
         }
 

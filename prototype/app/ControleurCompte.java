@@ -1,4 +1,4 @@
-public class ControleurCompte implements Controller {
+public class ControleurCompte {
 
 	private RepertoireCompte repertoire;
 
@@ -32,9 +32,4 @@ public class ControleurCompte implements Controller {
      *
      * @param info
      */
-    @Override
-    public Boolean isValid(String[] info) {
-        return null;
-    }
-
 }

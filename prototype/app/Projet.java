@@ -47,7 +47,7 @@ public class Projet extends Activite{
         this.description = description;
     }
     @Override
-    public void afficheFicheComplet(Activite activite){
+    public void afficheFicheComplet(){
         System.out.println("Titre: "+this.getTitre()+"Description: "+ this.getDescription()+
                 "Période: "+this.getDateDeDebut()+"--"+this.getDateDeFin() + "Responsable: "+this.getResponsable());
     }

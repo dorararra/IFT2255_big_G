@@ -7,8 +7,7 @@ public class Compte {
 	private Role role;
 	private String numCompte;
 
-
-    public Compte(String adresseCourriel, String motDePasse, CompteStatus status, Equipier membre, Role role, String numCompte) {
+    public Compte(String adresseCourriel, String motDePasse, CompteStatus status, Role role, String numCompte) {
         this.adresseCourriel = adresseCourriel;
         this.motDePasse = motDePasse;
         this.status = status;

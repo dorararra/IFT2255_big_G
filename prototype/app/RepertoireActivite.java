@@ -114,4 +114,39 @@ public class RepertoireActivite {
             }
         }
     }
+    public void afficheFicheCompletArticle(int i){
+        int length = articles.size();
+
+            Article article = articles.get(i - 1);
+            article.afficheFicheComplet();
+            System.out.println("invalide");
+
+
+    }
+    public Boolean articleSizeValide(int i){
+        if(i>0 && i<= articles.size()){
+            return true;
+        }
+        return false;
+    }
+    public Boolean outilSizeValide(int i){
+        if(i>0 && i<= outils.size()){
+            return  true;
+        }
+        return false;
+    }
+    public Boolean projetSizeValide(int i){
+        if(i>0 && i<= projets.size()){
+            return  true;
+        }
+        return false;
+    }
+    public void afficheFicheCompletOutil(int i){
+        Outil outil = outils.get(i-1);
+        outil.afficheFicheComplet();
+    }
+    public void afficheFicheCompletProjet(int i){
+        Projet projet = projets.get(i-1);
+        projet.afficheFicheComplet();
+    }
 }

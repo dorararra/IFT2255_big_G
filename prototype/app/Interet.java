@@ -63,4 +63,3 @@ public class Interet extends RepertoireInteret{
         this.description = description;
     }
 }
-}

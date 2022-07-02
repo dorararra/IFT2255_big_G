@@ -91,8 +91,9 @@ public class Article extends Activite {
 	public void setLienArticle(String lienArticle) {
 		this.lienArticle = lienArticle;
 	}
+
     @Override
-    public void afficheFicheComplet(Activite activite) {
+    public void afficheFicheComplet() {
         System.out.println("Titre: " + this.getTitre()+"\n"+"Résumé " + this.getResume() + "\n"
                             + "Auteurs: "+ this.getAuteurs() + "Collaborateurs: "+ this.getCollaborateurs()+
                             "Date de Publication: "+this.getDatePublication() + "Lien de Publication: "+this.getLienPublication());

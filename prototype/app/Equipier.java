@@ -15,7 +15,7 @@ public abstract class Equipier {
     private Compte compte;
 
     public Equipier(String id, String prenom, String nomDeFamille, int numeroDeTele, String adresseCourriel, String lienWeb,
-                    Condition titre, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret){
+                    Condition titre, ArrayList<Activite> inscrireActivite, ArrayList<Interet> inscrireInteret, Compte compte){
         this.id = id;
         this.prenom = prenom;
         this.nomDeFamille = nomDeFamille;
@@ -26,8 +26,11 @@ public abstract class Equipier {
         this.inscrireInteret = inscrireInteret;
         this.inscrireActivite = inscrireActivite;
         this.numNotification = numNotification;
+        this.compte = compte;
     }
-    public String getId(){return this.id;}
+    public String getId(){
+        return this.id;
+    }
     /**
      *
      * @param id

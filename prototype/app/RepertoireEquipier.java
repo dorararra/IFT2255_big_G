@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class RepertoireEquipier {
 
@@ -12,15 +13,13 @@ public class RepertoireEquipier {
         equipier.addAll(membre);
         equipier.addAll(superviseur);
         equipier.addAll(administrateur);
-
     }
 
     public void afficherListToutMembre() {
-        this.getTousMembre();
         int n = 0;
         for (Equipier mem : equipier) {
             n++;
-            System.out.println(n + " . " + mem);
+            System.out.println(n + " . " + mem.getPrenom() + " " + mem.getNomDeFamille());
 
         }
 
@@ -31,6 +30,10 @@ public class RepertoireEquipier {
      */
     public void afficherProfilComplet(Equipier membre) {
         System.out.println(membre.getPrenom() + membre.getNomDeFamille());
+        System.out.println(membre.getAdresseCourriel());
+        System.out.println(membre.getNumeroDeTele());
+        System.out.println(membre.getInscrireInteret());
+        //todo activite
     }
 
     /**
@@ -39,25 +42,35 @@ public class RepertoireEquipier {
      */
     public Equipier chercherMembre(String prenom, String nom) {
         for (Equipier mem : equipier) {
-            if ((mem.getPrenom() == prenom) && (mem.getNomDeFamille() == nom)) {
-                System.out.println("Nom Complet: " + mem.getPrenom() + mem.getNomDeFamille());
-                System.out.println("Adresse Courriel: " + mem.getAdresseCourriel());
-                System.out.println("Intérêt: " + mem.getInscrireInteret());
+            if ((mem.getPrenom().equals(prenom)) && (mem.getNomDeFamille().equals(nom))){
                 this.equipierTrouve = mem;
                 return equipierTrouve;
             }
         }
         return null;
     }
-    public int chercherMembreParCourriel(String adresseCourriel) {
+
+    public void ajouterMembre(Membre membre) {
+        this.membre.add(membre);
+    }
+
+    public Equipier chercherMembreParCourriel(String adresseCourriel) {
         for (Equipier mem : equipier) {
-            if ((mem.getAdresseCourriel() == adresseCourriel)){
+            if ((adresseCourriel.equals(mem.getAdresseCourriel()))){
                 this.equipierTrouve = mem;
-                return equipierTrouve.getNumeroDeTele();
+                return equipierTrouve;
             }
         }
-        return 0;
+        return null;
+    }
 
+    public ArrayList<Equipier> getEquipier() {
+        getTousMembre();
+        return equipier;
+    }
+
+    public void setEquipier(ArrayList<Equipier> equipier) {
+        this.equipier = equipier;
     }
 }
 

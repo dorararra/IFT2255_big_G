@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04486342-c404-454a-9771-c086412e136a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/prototype/app/ControleurEquipier.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/app/ControleurEquipier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme_sequence/afficherInteret.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/VPP/diagramme_sequence/afficherInteret.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme_sequence/modifierStatut.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/VPP/diagramme_sequence/modifierStatut.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VPP/diagramme_sequence/rechercherArticle.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/VPP/diagramme_sequence/rechercherArticle.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diagramme_classes/classes.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/diagramme_classes/classes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diagramme_sequence/sequence_afficherInteret.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/diagramme_sequence/sequence_afficherInteret.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diagramme_sequence/sequence_modifierStatut.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/diagramme_sequence/sequence_modifierStatut.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diagramme_sequence/sequence_rechercherArticle.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/diagramme_sequence/sequence_rechercherArticle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/prototype/c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rapport2.html" beforeDir="false" afterPath="$PROJECT_DIR$/rapport2.html" afterDir="false" />
     </list>
-    <list id="cf01af92-ea17-4e3f-b61d-e081bb55425d" name="Changes by 15392" comment="">
-      <change beforePath="$PROJECT_DIR$/prototype/app/Equipier.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/app/Equipier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prototype/app/RepertoireEquipier.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/app/RepertoireEquipier.java" afterDir="false" />
-    </list>
-    <list id="11bbe7cd-0b19-460f-9a2d-dfda3142a97f" name="Changes by shen" comment="">
-      <change beforePath="$PROJECT_DIR$/prototype/app/ControleurActivite.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/app/ControleurActivite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prototype/app/RepertoireActivite.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/app/RepertoireActivite.java" afterDir="false" />
-    </list>
+    <list id="cf01af92-ea17-4e3f-b61d-e081bb55425d" name="Changes by 15392" comment="" />
+    <list id="11bbe7cd-0b19-460f-9a2d-dfda3142a97f" name="Changes by shen" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +38,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2BERPDRHRsIKeHKP7fI2qylD2Up" />
   <component name="ProjectViewState">
@@ -67,6 +70,9 @@
       <workItem from="1656471147036" duration="2500000" />
       <workItem from="1656622374441" duration="121000" />
       <workItem from="1656622621918" duration="7109000" />
+      <workItem from="1656954580855" duration="823000" />
+      <workItem from="1656955727939" duration="2040000" />
+      <workItem from="1656958668003" duration="260000" />
     </task>
     <servers />
   </component>

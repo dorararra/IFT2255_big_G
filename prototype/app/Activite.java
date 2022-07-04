@@ -5,6 +5,7 @@ public abstract class Activite {
 	private String id;
 	private String titre;
 	private ArrayList<Interet> interetsLie;
+
     public Activite(String id,String titre, ArrayList<Interet> interetsLie){
         this.id = id;
         this.titre = titre;
@@ -35,15 +36,8 @@ public abstract class Activite {
         this.interetsLie = interetsLie;
     }
 
-
-	/**
-	 *
-	 * @param activite
-	 */
-	public void afficheFicheComplet() {
+    public void afficheFicheComplet() {
 
         }
-
-
 
 }

@@ -7,21 +7,28 @@ public class Outil extends Activite {
 	private Equipier responsable;
 	private ArrayList<Equipier> equipiers = new ArrayList<>();
     private ArrayList<Equipier> collaborateurs = new ArrayList<>();
+    private ArrayList<Equipier> auteurs = new ArrayList<>();
 	private ArrayList<Article> articles = new ArrayList<>();
-	private ArrayList<String> interetLie = new ArrayList<>();
+	private ArrayList<Interet> interetsLie = new ArrayList<>();
+    private ArrayList<String> motcles = new ArrayList<>();
 	private String description;
-    public  Outil(String id,String titre, ArrayList<Interet> interetsLie,Double version, String lienRepertoire,
-                  Equipier responsable,ArrayList<Equipier> equipiers ,ArrayList<Equipier> collaborateurs,ArrayList<Article> articles,ArrayList<String> interetLie){
+    public  Outil(String id,String titre,String description,Double version,String lienRepertoire,  Equipier responsable,ArrayList<Equipier> collaborateurs,ArrayList<Article> articles,
+                  ArrayList<String> motcles ,ArrayList<Interet> interetsLie){
         super(id, titre, interetsLie);
         this.version = version;
         this.lienRepertoire =lienRepertoire;
         this.responsable = responsable;
         this.equipiers = equipiers;
         this.articles = articles;
-        this.interetLie = interetLie;
-        this.collaborateurs = collaborateurs;
+
+
+
 
     }
+
+
+
+
 
     public Double getVersion() {
         return version;
@@ -63,12 +70,12 @@ public class Outil extends Activite {
         this.articles = articles;
     }
 
-    public ArrayList<String> getInteretLie() {
-        return interetLie;
+    public ArrayList<Interet> getInteretLie() {
+        return interetsLie;
     }
 
-    public void setInteretLie(ArrayList<String> interetLie) {
-        this.interetLie = interetLie;
+    public void setInteretLie(ArrayList<Interet> interetLie) {
+        this.interetsLie = interetLie;
     }
 
     public String getDescription() {
@@ -83,13 +90,19 @@ public class Outil extends Activite {
         return collaborateurs;
     }
 
-    public void setCollaborateurs(ArrayList<Equipier> collaborateurs) {
-        this.collaborateurs = collaborateurs;
+
+
+    public ArrayList<String> getMotcles() {
+        return motcles;
+    }
+
+    public void setMotcles(ArrayList<String> motcles) {
+        this.motcles = motcles;
     }
 
     @Override
     public void afficheFicheComplet(){
-        System.out.println("Nom: "+this.getTitre()+ "Description: "+this.getDescription()+ "Version: "+ this.version
-        + "Collaborateurs: "+ this.getCollaborateurs()+ "Lien du Répertoire: "+ this.getLienRepertoire() + "Article liés à l'outil: " + this.getArticles());
+        System.out.println("Nom: "+this.getTitre()+"\n"+ "Description: "+this.getDescription()+"\n"+ "Version: "+ this.getVersion()+"\n"
+        + "Collaborateurs: "+ this.getCollaborateurs()+"\n"+ "Lien du Répertoire: "+ this.getLienRepertoire()+"\n" + "Article liés à l'outil: " + this.getArticles()+"\n");
     }
 }

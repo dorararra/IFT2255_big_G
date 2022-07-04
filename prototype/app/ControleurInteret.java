@@ -1,15 +1,19 @@
+import java.util.ArrayList;
+
 public class ControleurInteret{
 
-	private RepertoireInteret repertoire;
+	private RepertoireInteret repertoire = new RepertoireInteret();
 
 	/**
 	 * 
 	 * @param interet
 	 */
-	public Boolean ajouterInteret(String interet) {
-		// TODO - implement ControleurInteret.ajouterInteret
-		throw new UnsupportedOperationException();
+	public void ajouterInteret(Interet interet) {
+		repertoire.ajouterInteret(interet);
 	}
+    public ArrayList<Interet> getListInteret(){
+        return repertoire.getListeInteret();
+    }
 
 	/**
 	 * 

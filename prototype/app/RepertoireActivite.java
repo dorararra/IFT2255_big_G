@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 public class RepertoireActivite {
     private ArrayList<Article> articles = new ArrayList<>();
@@ -8,36 +7,33 @@ public class RepertoireActivite {
     private ArrayList<String> tousLesID = new ArrayList<>();
 
     //chaque ID compose 1 lettre et 6 chiffre
-    private String generate6Chiffre() {
-        Random rand = new Random();
-        String num = "";
-        for (int i = 0; i < 6; i++) {
-            num += rand.nextInt(10);
-        }
-        return num;
+    private String generateIDNumber() {
+        String IdNum = String.valueOf(tousLesID.size());
+        return  IdNum;
     }
 
     public String generateArticleId() {
-        String idNum = generate6Chiffre();
-        if (!tousLesID.contains(idNum)) {
+        String idNum = generateIDNumber();
+        {
             this.tousLesID.add(idNum);
             String id = 'A' + idNum;
             return id;
-        } else return generateArticleId();
+        }
     }
 
     public void ajouteArticle(Article article) {
         article.setId(generateArticleId());
         articles.add(article);
+        System.out.println(articles.get(0).getId());
     }
 
     public String generateOutilId() {
-        String idNum = generate6Chiffre();
-        if (!tousLesID.contains(idNum)) {
+        String idNum = generateIDNumber();
+        {
             this.tousLesID.add(idNum);
             String id = 'O' + idNum;
             return id;
-        } else return generateOutilId();
+        }
     }
 
 
@@ -47,12 +43,12 @@ public class RepertoireActivite {
     }
 
     public String generateProjetId() {
-        String idNum = generate6Chiffre();
-        if (!tousLesID.contains(idNum)) {
+        String idNum = generateIDNumber();
+        {
             this.tousLesID.add(idNum);
             String id = 'P' + idNum;
             return id;
-        } else return generateProjetId();
+        }
     }
 
     public void ajouteProjet(Projet projet) {
@@ -64,7 +60,14 @@ public class RepertoireActivite {
         int n = 0;
         for (Article article : articles) {
             n++;
-            System.out.println(n + " . " + article);
+            System.out.print(n + ". " + article.getTitre()+"    ");
+            System.out.print("Auteurs: ");
+            ArrayList<Equipier> listAuteur = article.getAuteurs();
+            for (int i = 0; i < listAuteur.size();i++) {
+                System.out.print(listAuteur.get(i).getPrenom() + listAuteur.get(i).getNomDeFamille());
+            }
+            System.out.println("    " + article.getDatePublication());
+
         }
     }
 
@@ -72,7 +75,8 @@ public class RepertoireActivite {
         int n = 0;
         for (Outil outil : outils) {
             n++;
-            System.out.println(n + " . " + outil);
+            System.out.println(n + ". " + outil.getTitre()+"    "+outil.getVersion()+"    "+outil.getResponsable()
+                    +"    "+outil.getCollaborateurs());
         }
     }
 
@@ -80,7 +84,7 @@ public class RepertoireActivite {
         int n = 0;
         for (Projet projet : projets) {
             n++;
-            System.out.println(n + " . " + projet);
+            System.out.println(n + " . " + projet.getTitre()+"    "+projet.getResponsable());
         }
     }
 
@@ -96,7 +100,6 @@ public class RepertoireActivite {
                 for (int j = 0; j < articleRelatif.size(); j++) {
                     System.out.println(j + 1 + " . " + articleRelatif.get(j).getTitre() + " " + articleRelatif.get(j).getAuteurs() +
                             articleRelatif.get(j).getDatePublication());
-
                 }
             } else {
                 System.out.println("Rien à afficher.");
@@ -114,22 +117,26 @@ public class RepertoireActivite {
             }
         }
     }
-    public void afficheFicheCompletArticle(int i){
-        int length = articles.size();
 
-            Article article = articles.get(i - 1);
-            article.afficheFicheComplet();
-            System.out.println("invalide");
-
-
-    }
-    public Boolean articleSizeValide(int i){
-        if(i>0 && i<= articles.size()){
-            return true;
+    public Boolean sizeValide(int type, int i){
+        if (type==1) {
+            if (i > 0 && i <= articles.size()) {
+                return true;
+            }
+            return false;
+        }else if (type==2) {
+            if (i > 0 && i <= outils.size()) {
+                return true;
+            }
+            return false;
+        }else {
+            if (i > 0 && i <= projets.size()) {
+                return true;
+            }
+            return false;
         }
-        return false;
     }
-    public Boolean outilSizeValide(int i){
+    /*public Boolean outilSizeValide(int i){
         if(i>0 && i<= outils.size()){
             return  true;
         }
@@ -141,12 +148,24 @@ public class RepertoireActivite {
         }
         return false;
     }
-    public void afficheFicheCompletOutil(int i){
-        Outil outil = outils.get(i-1);
-        outil.afficheFicheComplet();
+
+     */
+
+    public void afficheFicheComplet(int type, int i){
+        if(type == 1) {
+            Article article = articles.get(i - 1);
+            article.afficheFicheComplet();
+        } else if(type == 2) {
+            Outil outil = outils.get(i-1);
+            outil.afficheFicheComplet();
+        }else {
+            Projet projet = projets.get(i-1);
+            projet.afficheFicheComplet();
+        }
     }
-    public void afficheFicheCompletProjet(int i){
-        Projet projet = projets.get(i-1);
-        projet.afficheFicheComplet();
+
+
+    public ArrayList<Article> getArticle(){
+        return  articles;
     }
 }

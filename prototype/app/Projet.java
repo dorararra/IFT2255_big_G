@@ -4,15 +4,17 @@ public class Projet extends Activite{
 
     private String dateDeDebut;
     private String dateDeFin;
-    private Superviseur responsable;
+    private Equipier responsable;
     private String description;
 
-    public Projet(String id, String titre, ArrayList<Interet> interetsLie,String dateDeDebut, String dateDeFin, Superviseur responsable, String description) {
+
+    public Projet(String id, String titre,String description, String dateDeDebut, String dateDeFin,Equipier responsable,ArrayList<Interet> interetsLie ) {
         super(id,titre,interetsLie);
         this.dateDeDebut = dateDeDebut;
         this.dateDeFin = dateDeFin;
         this.responsable = responsable;
         this.description = description;
+
     }
 
     public String getDateDeDebut() {
@@ -31,11 +33,11 @@ public class Projet extends Activite{
         this.dateDeFin = dateDeFin;
     }
 
-    public Superviseur getResponsable() {
+    public Equipier getResponsable() {
         return responsable;
     }
 
-    public void setResponsable(Superviseur responsable) {
+    public void setResponsable(Equipier responsable) {
         this.responsable = responsable;
     }
 
@@ -48,7 +50,7 @@ public class Projet extends Activite{
     }
     @Override
     public void afficheFicheComplet(){
-        System.out.println("Titre: "+this.getTitre()+"Description: "+ this.getDescription()+
-                "Période: "+this.getDateDeDebut()+"--"+this.getDateDeFin() + "Responsable: "+this.getResponsable());
+        System.out.println("Titre: "+this.getTitre()+"\n"+"Description: "+ this.getDescription()+"\n"+
+                "Période: "+this.getDateDeDebut()+"--"+this.getDateDeFin()+"\n" + "Responsable: "+this.getResponsable()+"\n");
     }
 }

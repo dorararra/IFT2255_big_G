@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Interet extends RepertoireInteret{
+public class Interet{
 
     private String id;
     private String titre;
@@ -8,21 +8,28 @@ public class Interet extends RepertoireInteret{
     private ArrayList<Equipier> membreSouscrit;
     private ArrayList<Activite> activiteSouscrit;
 
+    public Interet(String id, String titre, String description) {
+        this.id = id;
+        this.titre = titre;
+        this.description = description;
+    }
+
     /**
      *
      * @param interet
      */
-    public Activite[] afficherActiviteAssocieInteret(String interet) {
+    public void afficherActiviteAssocieInteret(String interet) {
         // TODO - implement Interet.afficherActiviteAssocieInteret
         int num = 0;
-        for(Activite act : this.activiteSouscrit){
-            num ++;
+        for (Activite act : this.activiteSouscrit) {
+            num++;
             System.out.print(num + "." + act.getTitre());
 
         }
-        throw new UnsupportedOperationException();
-
     }
+
+
+
 
     /**
      *

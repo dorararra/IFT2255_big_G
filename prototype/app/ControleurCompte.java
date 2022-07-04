@@ -1,35 +1,27 @@
 public class ControleurCompte {
 
-	private RepertoireCompte repertoire;
+    private RepertoireCompte repertoire;
 
-	/**
-	 * 
-	 * @param numCompte
-	 */
-	public Boolean supprimerCompte(String numCompte) {
-		// TODO - implement ControleurCompte.supprimerCompte
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param compte
-	 */
-	public int ajouterCompte(Compte compte) {
-		// TODO - implement ControleurCompte.ajouterCompte
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param numCompte
-	 */
-	public Compte getCompte(String numCompte) {
-		// TODO - implement ControleurCompte.getCompte
-		throw new UnsupportedOperationException();
-	}
     /**
-     *
-     * @param info
+     * @param numCompte
      */
+    public void supprimerCompte(String numCompte) {
+        repertoire.supprimerCompte(numCompte);
+    }
+
+
+
+    /**
+     * @param compte
+     */
+    public void ajouterCompte(Compte compte) {
+        repertoire.ajouterCompte(compte);
+    }
+
+    /**
+     * @param numCompte
+     */
+    public Compte getCompte(String numCompte) {
+        return repertoire.getCompte(numCompte);
+    }
 }

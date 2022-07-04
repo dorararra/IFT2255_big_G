@@ -24,7 +24,6 @@ public class RepertoireActivite {
     public void ajouteArticle(Article article) {
         article.setId(generateArticleId());
         articles.add(article);
-        System.out.println(articles.get(0).getId());
     }
 
     public String generateOutilId() {
@@ -67,7 +66,6 @@ public class RepertoireActivite {
                 System.out.print(listAuteur.get(i).getPrenom() + listAuteur.get(i).getNomDeFamille());
             }
             System.out.println("    " + article.getDatePublication());
-
         }
     }
 

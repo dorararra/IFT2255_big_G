@@ -115,8 +115,8 @@ public class Article extends Activite {
                 System.out.println(listCollaborateurs.get(i).getPrenom() +" "+ listCollaborateurs.get(i).getNomDeFamille());
             }
         }
-        System.out.println("Date de Publication: "+this.getDatePublication() +"\n"+
-                "Lien de Publication: "+this.getLienPublication()+"\n");
+        System.out.println("Date de publication: "+this.getDatePublication() +"\n"+
+                "Lien de la publication: "+this.getLienPublication()+"\n");
     }
 
 }

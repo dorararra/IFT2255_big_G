@@ -90,8 +90,6 @@ public class Outil extends Activite {
         return collaborateurs;
     }
 
-
-
     public ArrayList<String> getMotcles() {
         return motcles;
     }
@@ -103,6 +101,6 @@ public class Outil extends Activite {
     @Override
     public void afficheFicheComplet(){
         System.out.println("Nom: "+this.getTitre()+"\n"+ "Description: "+this.getDescription()+"\n"+ "Version: "+ this.getVersion()+"\n"
-        + "Collaborateurs: "+ this.getCollaborateurs()+"\n"+ "Lien du Répertoire: "+ this.getLienRepertoire()+"\n" + "Article liés à l'outil: " + this.getArticles()+"\n");
+        + "Collaborateurs: "+ this.getCollaborateurs()+"\n"+ "Lien du répertoire: "+ this.getLienRepertoire()+"\n" + "Articles liés à l'outil: " + this.getArticles()+"\n");
     }
 }

@@ -21,7 +21,6 @@ public class RoundTable {
         Membre Jessie = new Membre("120","Jessie","Galasso",321,"j",
                "www.google.com",null,null,null,null, compteJessie);
 
-
         Interet interet = new Interet("7967","Pattern mining","Pattern mining is a topic of data mining concerned with finding statistically relevant patterns between data examples where the values are delivered in a sequence.");
         controleurInteret.ajouterInteret(interet);
         controleurEquipier.ajouterAuteur(Jessie);

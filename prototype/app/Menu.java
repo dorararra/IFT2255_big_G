@@ -59,7 +59,6 @@ public class Menu {
 					System.out.println("Vous êtes déconnecté.");
 					System.exit(0);
 				}
-
 				this.equipierLog = controleurEquipier.chercherEquipierParCourriel(adresseCourriel);
 				if (equipierLog == null) {
 					System.out.println("Votre adresse courriel est invalide. Réessayez SVP, ou pressez 0 à quitter.");
@@ -118,7 +117,7 @@ public class Menu {
 						consulterActivite();
 						break;
 					case "3":
-						//chercherActivite();
+						chercherActivite();
 						printMenu();
 						break;
 					case "4":
@@ -159,9 +158,6 @@ public class Menu {
 
 	}
 
-	/**
-	 * Consulter le profil complet d’un membre par liste ou chercher un membre par son nom complet
-	 */
 	private void consulterMembre() {
 		printMembreMenu();
 		String id = null;
@@ -195,6 +191,7 @@ public class Menu {
 	}
 
 	private void afficherListeMembre() {
+		System.out.println("-----Membre-----");
 		controleurEquipier.afficherListMembre();
 		System.out.println("Entrez le numéro du membre vous voulez consulter, ou pressez 0 pour revenir au menu principal.");
 		Scanner scannerNum = new Scanner(System.in);
@@ -223,10 +220,6 @@ public class Menu {
 		}
 	}
 
-
-
-
-
 	private void chercherNomComplet() {
 		System.out.println("Entrez le nom complet de membre:");
 		Scanner scannerNom = new Scanner(System.in);
@@ -252,18 +245,12 @@ public class Menu {
                         else{
                             reussiReturn();
                         }
-
 					}
                     chercherNomComplet();
-
 						}
-
-
 					}
 				}
 			}
-
-
 
 	private void printActiviteMenu() {
 		System.out.println("1. Article" + "\n" +
@@ -320,7 +307,7 @@ public class Menu {
 					controleurActivite.afficheFicheComplet(type,i2);
 					break;
 				} else {
-					System.out.println("Le numéro que vous avez entré est invalide.Réessayez SVP, ou pressez 0 à quitter.");
+					System.out.println("Le numéro que vous avez entré est invalide. Réessayez SVP, ou pressez 0 à quitter.");
 					//afficherFicheCompletArticle();
 				}
 			}else{
@@ -332,65 +319,12 @@ public class Menu {
 		reussiReturn();
 	}
 
-	/*private void afficherFicheCompletOutil() {
-		controleurActivite.afficherListToutOutil();
-		System.out.println("Entrez le numéro de l'outil vous voulez consulter, ou pressez 0 pour revenir au menu principal.");
-		Scanner scannerAFC = new Scanner(System.in);
-		while (scannerAFC.hasNextLine()) {
-			String i2s = scannerAFC.nextLine();
-			if (i2s.equals("0")) {
-				printMenu();
-				menu();
-				break;
-			}
-			if (testInt(i2s)) {
-				int i2 = Integer.parseInt(i2s);
-				if (controleurActivite.outilSizeValide(i2)) {
-					controleurActivite.afficheFicheCompletOutil(i2);
-					break;
-				} else {
-					System.out.println("Le numéro que vous avez entré est invalide.");
-					//afficherFicheCompletArticle();
-				}
-			}else{
-				System.out.println("Le numéro que vous avez entré est invalide.");
-				//afficherFicheCompletArticle();
-				break;
-			}
-		}
-		reussiReturn();
-	}
-
-	private void afficherFicheCompletProjet() {
-		System.out.println("Entrez le numéro du projet vous voulez consulter, ou pressez 0 pour revenir au menu principal.");
-		Scanner sc2 = new Scanner(System.in);
-		String i2 = sc2.nextLine();
-		if (i2.equals("0")) {
-			printMenu();
-			menu();
-		}
-		if(testInt(i2) == true){
-			int numi2 = Integer.parseInt(i2);
-			if (controleurActivite.projetSizeValide(numi2)) {
-				controleurActivite.afficheFicheCompletProjet(numi2);
-			} else {
-				System.out.println("Le numéro que vous avez entré est invalide.");
-				afficherFicheCompletProjet();
-			}
-		}else {
-			System.out.println("Le numéro que vous avez entré est invalide.");
-			afficherFicheCompletProjet();
-		}
-	}
-
-	 */
-
 	private void chercherActiviteMenu() {
 		System.out.println("1. Article" + "\n" +
 				"2. Projet" + "\n" +
 				"Pressez 0 pour revenir au menu principal.");
 	}
-
+	
 	private void chercherArticle() {
 		System.out.println("Entrez le numéro de l'article vous voulez consulter, ou pressez 0 pour revenir au menu principal." + "\n");
 		Scanner sc2_1 = new Scanner(System.in);

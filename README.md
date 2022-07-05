@@ -2,7 +2,7 @@
 ### Notre équipe: Big_G
 Mingze Li, Qianyun Shen, Duola Peng, Shilong Zhou
 ### But de projet
-Le but de ce projet est de créer un outil 'La plateforme **Roundtable**' pour suivre, visualiser, gérer les membres et les activités, etc.<br />
+Le but de ce projet est de créer un outil '**La plateforme Roundtable**' pour suivre, visualiser, gérer les membres et les activités, etc.<br />
 
 ### Structure du dossier
 \images: sous-dossier contenant toutes les images, y compris les diagrammes d'activités, la diagramme de classe et les diagrammes de séquence.<br />

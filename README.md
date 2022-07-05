@@ -14,7 +14,7 @@ Le but de ce projet est de créer un outil '**La plateforme Roundtable**' pour s
 ### Manuel d'utilisation
 1. Pour accéder à la plateforme **Roundtable**, vous devez exécuter le fichier 'RoundTable.java'.
 2. Afin de vous tester les codes, nous vous donnons une adresse courriel et un mot de passe pour vous connecter au système: 
-- adresse courriel: ###
+- adresse courriel: 54321@geodes.com
 - mot de passe: 12345
 3. Ensuite, vous pouvez suivre les instructions du système pour compléter votre opération.
 

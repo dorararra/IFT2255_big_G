@@ -33,8 +33,8 @@ public class Projet extends Activite{
         this.dateDeFin = dateDeFin;
     }
 
-    public Equipier getResponsable() {
-        return responsable;
+    public String getResponsable() {
+        return (responsable.getPrenom()+" "+responsable.getNomDeFamille());
     }
 
     public void setResponsable(Equipier responsable) {

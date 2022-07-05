@@ -59,6 +59,7 @@ public class Menu {
 					System.out.println("Vous êtes déconnecté.");
 					System.exit(0);
 				}
+
 				this.equipierLog = controleurEquipier.chercherEquipierParCourriel(adresseCourriel);
 				if (equipierLog == null) {
 					System.out.println("Votre adresse courriel est invalide. Réessayez SVP, ou pressez 0 à quitter.");
@@ -118,7 +119,7 @@ public class Menu {
 						break;
 					case "3":
 						chercherActivite();
-						printMenu();
+
 						break;
 					case "4":
 						consulterMonActivite();
@@ -158,6 +159,9 @@ public class Menu {
 
 	}
 
+	/**
+	 * Consulter le profil complet d’un membre par liste ou chercher un membre par son nom complet
+	 */
 	private void consulterMembre() {
 		printMembreMenu();
 		String id = null;
@@ -191,7 +195,6 @@ public class Menu {
 	}
 
 	private void afficherListeMembre() {
-		System.out.println("-----Membre-----");
 		controleurEquipier.afficherListMembre();
 		System.out.println("Entrez le numéro du membre vous voulez consulter, ou pressez 0 pour revenir au menu principal.");
 		Scanner scannerNum = new Scanner(System.in);
@@ -220,6 +223,10 @@ public class Menu {
 		}
 	}
 
+
+
+
+
 	private void chercherNomComplet() {
 		System.out.println("Entrez le nom complet de membre:");
 		Scanner scannerNom = new Scanner(System.in);
@@ -245,18 +252,24 @@ public class Menu {
                         else{
                             reussiReturn();
                         }
+
 					}
                     chercherNomComplet();
+
 						}
+
+
 					}
 				}
 			}
+
+
 
 	private void printActiviteMenu() {
 		System.out.println("1. Article" + "\n" +
 				"2. Outil" + "\n" +
 				"3. Projet" + "\n" +
-				"Pressez 0 pour revenir au menu principal");
+				"Entrez le numéro vous voulez consulter, ou pressez 0 pour revenir au menu principal.");
 	}
 
 	private void consulterActivite() {
@@ -307,7 +320,7 @@ public class Menu {
 					controleurActivite.afficheFicheComplet(type,i2);
 					break;
 				} else {
-					System.out.println("Le numéro que vous avez entré est invalide. Réessayez SVP, ou pressez 0 à quitter.");
+					System.out.println("Le numéro que vous avez entré est invalide.Réessayez SVP, ou pressez 0 à quitter.");
 					//afficherFicheCompletArticle();
 				}
 			}else{
@@ -319,24 +332,49 @@ public class Menu {
 		reussiReturn();
 	}
 
+
+
 	private void chercherActiviteMenu() {
 		System.out.println("1. Article" + "\n" +
 				"2. Projet" + "\n" +
 				"Pressez 0 pour revenir au menu principal.");
 	}
-	
+
 	private void chercherArticle() {
-		System.out.println("Entrez le numéro de l'article vous voulez consulter, ou pressez 0 pour revenir au menu principal." + "\n");
+
+		System.out.println("Entrez le titre,auteur ou mot-clés de l'article ou pressez 0 pour revenir au menu principal." + "\n");
+
 		Scanner sc2_1 = new Scanner(System.in);
 		String in2_1 = sc2_1.nextLine();
-		//controleurActivite.chercherArticle(in2_1);
+        if(in2_1 .equals("0")){
+            printMenu();
+            menu();
+        }
+		if(controleurActivite.chercherArticle(in2_1)){
+            reussiReturn();
+        };
+        {
+            System.out.println("L'information que vous avez entré n'existe pas. Réessayez SVP");
+            chercherArticle();
+        }
 	}
 
 	private void chercherProjet() {
-		System.out.println("Entrez responsable pour chercher un projet:" + "\n");
+		System.out.println("Entrez responsable pour chercher un projet ou pressez 0 pour revenir au menu principal:" + "\n");
 		Scanner sc2_2 = new Scanner(System.in);
 		String in2_2 = sc2_2.nextLine();
-		//controleurActivite.chercherProjet(in2_2);
+        if(in2_2 .equals("0")){
+            printMenu();
+            menu();
+        }
+		if(controleurActivite.chercherProjet(in2_2)){
+            reussiReturn();
+        };
+        {
+            System.out.println("L'information que vous avez entré n'existe pas. Réessayez SVP");
+            chercherProjet();
+
+        }
 	}
 
 	private void chercherActivite() {
@@ -350,7 +388,7 @@ public class Menu {
 			case "2":
 				chercherProjet();
 				break;
-			case "3":
+			case "0":
 				printMenu();
 				menu();
 				break;
@@ -360,35 +398,42 @@ public class Menu {
 
 		}
 	}
+    private void notOpen(){
+        System.out.println("À bientôt,pressez 0 pour revenir au menu principal");
+        Scanner sc3 = new Scanner(System.in);
+        String i3 = sc3.nextLine();
+        if(i3.equals("0")){
+        printMenu();
+        menu();
+    }
+        else{
+            notOpen();
+        }
+
+        }
 
 	private void consulterMonActivite() {
-		// TODO - implement Menu.consulterMonActivite
-		throw new UnsupportedOperationException();
+		notOpen();
 	}
 
 	private void consulterInteret() {
-		// TODO - implement Menu.consulterMonActivite
-		throw new UnsupportedOperationException();
+		notOpen();
 	}
 
 	private void gererActivite() {
-		// TODO - implement Menu.gererActivite
-		throw new UnsupportedOperationException();
+		notOpen();
 	}
 
 	private void gererSouscription() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
+	    notOpen();
 	}
 
 	private void gererCompte() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
+		notOpen();
 	}
 
 	private void fonctionSpeciale() {
-		// TODO - implement Menu.gererSouscription
-		throw new UnsupportedOperationException();
+		notOpen();
 	}
 
 	public boolean testInt(String s) {

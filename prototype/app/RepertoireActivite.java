@@ -66,6 +66,7 @@ public class RepertoireActivite {
                 System.out.print(listAuteur.get(i).getPrenom() + listAuteur.get(i).getNomDeFamille());
             }
             System.out.println("    " + article.getDatePublication());
+
         }
     }
 
@@ -86,34 +87,50 @@ public class RepertoireActivite {
         }
     }
 
-    public void chercherArticle(String titreOuAuteurOuMotcle) {
+    public int chercherArticle(String titreOuAuteurOuMotcle) {
         // article relatif
         ArrayList<Article> articleRelatif = new ArrayList<>();
-        for (Article article : articles) {
-            if (titreOuAuteurOuMotcle == article.getTitre() || article.getAuteurs().contains(titreOuAuteurOuMotcle)
-                    || article.getMotcles().contains(titreOuAuteurOuMotcle)) {
-                articleRelatif.add(article);
-            }
-            if (articleRelatif.size() != 0) {
-                for (int j = 0; j < articleRelatif.size(); j++) {
-                    System.out.println(j + 1 + " . " + articleRelatif.get(j).getTitre() + " " + articleRelatif.get(j).getAuteurs() +
-                            articleRelatif.get(j).getDatePublication());
+
+
+
+            for (int i = 0; i < articles.size(); i++) {
+                if (String.valueOf( articles.get(i).getTitre()).equals(titreOuAuteurOuMotcle)  ) {
+                    articleRelatif.add(articles.get(i));
+
                 }
-            } else {
-                System.out.println("Rien à afficher.");
+                for (int j = 0; j < articles.get(i).getAuteurs().size(); j++) {
+                    if (String.valueOf(articles.get(i).getAuteurs().get(j).getPrenom()+" "+articles.get(i).getAuteurs().get(j).getNomDeFamille()).equals(titreOuAuteurOuMotcle)){
+                        articleRelatif.add(articles.get(i));
+                    }
+                }
+
+                for (int w = 0; w < articles.get(i).getMotcles().size(); w++) {
+                    if (String.valueOf(articles.get(i).getMotcles().get(w)).equals(titreOuAuteurOuMotcle)){
+                        articleRelatif.add(articles.get(i));
+                    }
+                }
             }
+        for (Article article : articleRelatif) {
+            article.afficheFicheComplet();
         }
 
+            return articleRelatif.size();
     }
-    public void chercherProjet(String responsable){
+
+    public int chercherProjet(String responsable){
         // projet relatif
         ArrayList<Projet>projetRelatif = new ArrayList<>();
         for(Projet projet : projets){
-            if(responsable == (projet.getResponsable().getPrenom()+" "+projet.getResponsable().getNomDeFamille())){
+            if((String.valueOf(projet.getResponsable()).equals(responsable))){
                 projetRelatif.add(projet);
 
             }
+           for(Projet projetrelatif : projetRelatif){
+               projetrelatif.afficheFicheComplet();
+           }
+
         }
+        return projetRelatif.size();
     }
 
     public Boolean sizeValide(int type, int i){

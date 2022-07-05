@@ -32,11 +32,24 @@ public class ControleurActivite {
         repertoire.afficherListToutProjet();
     }
 
-    public void chercherArticle(String titreOuAuteurOuMotcle){
-        repertoire.chercherArticle(titreOuAuteurOuMotcle);
+    public boolean chercherArticle(String titreOuAuteurOuMotcle){
+        // sum of article relatif
+         int total =  repertoire.chercherArticle(titreOuAuteurOuMotcle);
+         if(total>0){
+             return  true;
+         }
+         else{
+             return  false;
+         }
     }
-    public void chercherProjet(String responsable){
-        repertoire.chercherProjet(responsable);
+    public boolean chercherProjet(String responsable){
+        int total = repertoire.chercherProjet(responsable);
+        if(total>0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public void afficheFicheComplet(int type, int i){repertoire.afficheFicheComplet(type,i);}

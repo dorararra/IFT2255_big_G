@@ -286,7 +286,11 @@
         logiciel à travers les CUs et les scénarios.<br><br>
         <b>Pour DM2:</b>
         <p>Au cours de la première semaine après la soumise, nous avons analysé ensemble les lacunes du rapport du
-          livrable 1 basé sur le feedback DM1 et corrigé les défauts. En parallèle, nous avons analysé les informations
+          livrable 1 basé sur le feedback DM1 et corrigé les défauts. On a modifié les détails dans les CUs et le diagramme de CU en conséquence. 
+          En ré-analysant les besoins des clients, on a corrigé l’hypothèse, les risques et les besoins non-fonctionnelles.<br>
+          <b>Explication: </b><i>Par apport à CU de suppresion d'une activité et assignation/nodification d'un rôle, on pense que la suppression d'une activité vient généralement en réponse à une demande d'un membre.<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbspDonc on considère que l'administrateur comme acteur secondaire (supportant l'action).</i><br>
+          En parallèle, on a analysé les informations
           nécessaires pour les diagrammes en fonction des besoins et discuter la structure des diagrammes d'activités
           sur la base des CUs et des scénarios.<br><br>
           La deuxième semaine, nous avons commencé à dessiner les diagrammes avec Visual Paradigm. Mingze Li a d'abord
@@ -756,6 +760,9 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           <b>Nom: </b>Supprimer une activité<br>
           <b>But: </b>Un membre désire supprimer une activité<br>
           <b>Acteurs: </b>Responsable de cette activité (principal), Administrateur (secondaire)<br>
+          &nbsp&nbsp<b>Explication</b>: <i>On pense que la suppression d'une activité vient généralement en réponse à une demande d'un membre.<br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbspDonc on considère que l'administrateur comme acteur secondaire (supportant l'action).</i>
+          <b>Préconditions: </b>Le membre a des preuves de son nouveau rôle.<br>
           <b>Préconditions: </b>Le membre a une raison valable de le supprimer.<br>
           <b>Scénario principal</b><br>
           1. Le responsable contacte l’administrateur pour supprimer une activité et explique sa raison.<br>
@@ -830,9 +837,6 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           <b>Nom: </b>Modifier le rôle d’un membre<br>
           <b>But: </b>Un membre demande à l’administrateur de modifier son rôle et donne des preuves nécessaires<br>
           <b>Acteurs: </b>Membre (principal) , Administrateur (secondaire)<br>
-          &nbsp&nbsp<b>Explication</b>: <i>On pense que la suppression d'une activité vient généralement en réponse à une demande d'un membre.<br>
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbspDonc on considère que l'administrateur comme acteur secondaire (supportant l'action).
-          <b>Préconditions: </b>Le membre a des preuves de son nouveau rôle.<br>
           <b>Scénario principal</b><br>
           1. Le membre contacte l’administrateur pour modifier son rôle et donne des preuves nécessaires.<br>
           2. L’administrateur vérifie les preuves de son nouveau rôle.<br>

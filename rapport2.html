@@ -399,10 +399,10 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           </tr>
           <tr>
             <td align="center"><b>Analyse</b></td>
-            <td align="center">5%</td>
-            <td align="center">30%</td>
-            <td align="center">40%</td>
-            <td align="center">30%</td>
+            <td align="center">20%</td>
+            <td align="center">15%</td>
+            <td align="center">35%</td>
+            <td align="center">20%</td>
           </tr>
           <tr>
             <td align="center"><b>Diagramme d'activités</b></td>
@@ -414,9 +414,9 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           <tr>
             <td align="center"><b>Diagramme de classe</b></td>
             <td align="center">0%</td>
-            <td align="center">10%</td>
             <td align="center">0%</td>
-            <td align="center">90%</td>
+            <td align="center">0%</td>
+            <td align="center">100%</td>
           </tr>
           <tr>
             <td align="center"><b>Diagramme de séquence</b></td>
@@ -427,9 +427,9 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
           </tr>
           <tr>
             <td align="center"><b>Prototype fonctionnel</b></td>
-            <td align="center">35%</td>
+            <td align="center">40%</td>
             <td align="center">5%</td>
-            <td align="center">25%</td>
+            <td align="center">20%</td>
             <td align="center">35%</td>
           </tr>
           <tr>
@@ -1039,12 +1039,24 @@ Quoique ce champ est optionnel vu qu'un (vrai) professeur n'a pas de superviseur
         <h2 id="conception" class="section-title">Conception</h2>
         <div>
           <h2>Justification des choix du design</h2>
-           <p><b>Pour l'abstraction:</b> <br>Nous avons résumé certaines classes ayant les mêmes attributs, 
-            en tirant les attributs communs et les utilisant comme la classe parente abstraite. Par exemple, la classe <b>Activite</b> est la classe parente d'<b>Article</b>, <b>Outil</b> et <b>Projet</b>, qui ont des attributs communs: id et title.</p>
-            <p><b>Pour le couplage:</b> <br>Nous avons associé certaines classes qui sont fortement dépendantes les unes des autres en utilisant <i>use</i>. 
-            Par exemple, la classe <b>Condition</b> ne peut pas être utilisée indépendamment de la classe <b>Equipier</b>. De même, la classe <b>ArticleStatus</b> ne peut pas être utilisée indépendamment de la classe <b>Article</b>.</p>
-            <p><b>Pour la cohésion:</b> <br>Nous avons regroupé les opérations en fonction de l'exécuteur, de l'ordre d'exécution, des données utilisées et les avons mises dans une même classe. 
-                Par exemple, pour l'administrateur, les opérations d'assigner, de modifier les rôles, de supprimer les activités et de suspendre et réactiver les comptes sont ses actions.</p>
+          <p><b>Pour l'abstraction: </b><br>
+            On trouve qu'il y avait certaines attributs communs dans les spécifications. L'abstraction peut donc être utilisée pour simplifier la structure du code.
+            Par exemple, on définit la classe <b>Activite</b> comme une classe abstraite dans laquelle certaines
+            variables d'instance (id, titre, interetsLie) sont définies. Dans le même temps, on utilise la classe
+            <b>Article</b>, la classe <b>Outil</b> et la classe <b>Projet</b> pour "extend" la classe <b>Activite</b>,
+            c'est-à-dire mettre la classe <b>Activite</b> comme classe parente. De cette façon, ces trois sous-classes
+            peuvent instancier la classe <b>Activite</b> pour réduire la duplication de code.</p>
+          <p><b>Pour le couplage: </b>Couplage est l'indication de la relations entre modules.<br>
+            On trouve que certaines fonctions du système sont indépendantes des autres.
+            Par conséquent, le code devrait également refléter l'indépendance de ces classes par rapport aux autres.
+            On rend chaque fonction du menu principal aussi simple que possible, c'est-à-dire en appelant le moins d'autres fonctions possible.
+            S'il doit y avoir couplage entre modules, on ne fais que passer des données mais pas des instructions entre le module appelant et le module appelé.
+            Par exemple, la classe <b>ControleurEquipier</b> appelle souvent la classe <b>RépertoireEquipier</b> pour
+            demander des données ou String ou Arraylist pour affaiblir le couplage.</p>
+          <p><b>Pour la cohésion: </b>Cohésion est l'indication de la relation dans un module.<br>
+            Correspondant à un couplage faible, on essaie de faire en sorte que chaque méthode de la classe n'implémente
+            qu'une seule sous-fonction pour cohésion forte. Par exemple, on rend les méthode "private", de sorte que
+            la classe se concentre sur ce qu'elle doit faire, c'est à dire uniquement les méthodes concernant l'intention de la classe.</p>
         </div>
           
         <div>

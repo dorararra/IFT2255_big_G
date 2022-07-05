@@ -17,6 +17,7 @@ Le but de ce projet est de créer un outil '**La plateforme Roundtable**' pour s
 - adresse courriel: 54321@geodes.com
 - mot de passe: 12345
 3. Ensuite, vous pouvez suivre les instructions du système pour compléter votre opération.
+4. Vous pouvez quitter le système en pressant 0 lorsque vous êtes dans le menu principal. Vous pouvez revenir au menu principal lorsque vous êtes dans une autre interface.
 
 **Limitations:**
 *Le prototype fonctionnel actuel n'implémente toujours pas toutes les fonctionnalités des membres. Dans le menu principal que vous voyez lorsque vous vous connectez au système, les trois premières fonctions sont bien testées. Nous avons prédéfini certaines activités virtuelles pour faciliter les tests. Vous pouvez suivre les instructions pour tester. Cependant, les fonctionnalités 4 à 9 ne sont toujours pas ouvertes au fonctionnement. Nous les ferons dans la troisième livraison.*

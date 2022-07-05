@@ -17,3 +17,6 @@ Le but de ce projet est de créer un outil 'La plateforme **Roundtable**' pour s
 - adresse courriel: ###
 - mot de passe: 12345
 3. Ensuite, vous pouvez suivre les instructions du système pour compléter votre opération.
+
+**Limitations:**
+*Le prototype fonctionnel actuel n'implémente toujours pas toutes les fonctionnalités des membres. Dans le menu principal que vous voyez lorsque vous vous connectez au système, les trois premières fonctions sont bien testées. Nous avons prédéfini certaines activités virtuelles pour faciliter les tests. Vous pouvez suivre les instructions pour tester. Cependant, les fonctionnalités 4 à 9 ne sont toujours pas ouvertes au fonctionnement. Nous les ferons dans la troisième livraison.*

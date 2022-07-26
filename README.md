@@ -82,16 +82,17 @@ Pour se connecter à l'application, veuillez utiliser un des identifiants suivan
 
 ### Menu principal (Membre)
 
-Ã€ partir du menu principal, dans le rÃ´le du membre, vous pouvez choisir l'une des options suivantes en tapant le chiffre correspondant.
+À partir du menu principal, dans le rôle du membre, vous pouvez choisir l'une des options suivantes en tapant le chiffre correspondant.
 
-- [1] Trouver un membre: AccÃ©dez Ã  la liste des membres ou effectuer une recherche.
-- [2] Trouver un article: AccÃ©dez Ã  la liste des articles ou effectuer une recherche.
-- [3] Trouver un outil: AccÃ©dez Ã  la liste des articles ou effectuer une recherche.
-- [4] Trouver un projet: AccÃ©dez Ã  la liste des articles ou effectuer une recherche.
-- [5] GÃ©rer mes activitÃ©s: AccÃ©dez Ã  la liste de vos activitÃ©s et ajouter, modifier ou supprimer une activitÃ©.
-- [6] GÃ©rer mes inscriptions: AccÃ©dez Ã  la liste de vos inscriptions et ajouter, modifier ou supprimer une inscription.
-- [7] Consulter mes notifications: Voir mes notifications
-- ...
+- [1] Consulter un membre: Accédez à la liste des membres ou effectuer une recherche.
+- [2] Consulter une activité: Accédez à la liste des activités.
+- [3] Chercher une article: Effectuer une recherche des articles par le titre ou l'auteur ou les mots-clés.
+- [4] Consulter un intérêt: Accédez à la liste des articles ou effectuer une recherche.
+- [5] Ajouter une activité: Ajouter une activité 
+- [6] Modifier une activité: Modifiez une activité dont je suis responsable.
+- [7] Gérer la souscription: Accédez à la liste de vos inscriptions et ajouter, modifier ou supprimer une inscription.
+- [8] Mon compte: Voir mes notifications.
+- [9] Fonction spéciale: Pour le superviseur et l'administrateur.
 - [0] Quitter
 
 #### Gestion de mes activitÃ©s
@@ -99,11 +100,11 @@ Pour se connecter à l'application, veuillez utiliser un des identifiants suivan
 Dans cette section, vous pouvez accÃ©der Ã  vos activitÃ©s en cours et passÃ©es, et en crÃ©er de nouvelles.
 Suivez les instructions Ã  l'Ã©cran pour complÃ©ter la tache.
 
-- [a1] CrÃ©er un article | [a2] Modifier un article | [a3] Supprimer un article
-- [o1] CrÃ©er un outil | [o2] Modifier un outil | [o3] Supprimer un outil
-- [p1] CrÃ©er un projet | [p2] Modifier un projet | [p3] Supprimer un projet
-- [4] Voir les activitÃ©s en cours
-- [5] Voir les activitÃ©s suivies
+- [a1] Créer un article | [a2] Modifier un article | [a3] Supprimer un article
+- [o1] Créer un outil | [o2] Modifier un outil | [o3] Supprimer un outil
+- [p1] Créer un projet | [p2] Modifier un projet | [p3] Supprimer un projet
+- [4] Voir les activités en cours
+- [5] Voir les activités suivies
 - ...
 - [0] Revenir au menu principal
 

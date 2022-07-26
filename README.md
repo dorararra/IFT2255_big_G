@@ -63,38 +63,22 @@ Pour utiliser l'application, il vous faut exécuter la commande suivante: `java 
   - P003;Multi-paradigm digital twin framework;2021-01-01;2023-12--31;Eugene Syriani;collaModel, modelEngineer
   - P004;Optimization of task sequencing and allocation;2021-01-01;2022-12-27;Eugene Syriani;collaModel, modelEngineer
   - P005;Semantic versioning of model changes;2021-03-01;2021-06-28;Houari Sahraoui;aiAssistance, goalModeling
-- Membre (ID;prénom;nom de famille;numéro de téléphone;adresse courriel;titre;superviseur;intérêts
-  - Pr001;Houari;Sahraoui;1990-01-13;sahraoui@iro.umontreal.ca;5148203842;professeur;null;goalModeling
-  - Pr002;Eugene;Syriani;1994-10-06;syriani@iro.umontreal.ca;5143436111;professeur;null;collaModel
-  - Ad001;Louis-Edouard;Lafontant;4389271920;louis.edouard.lafontant@umontreal.ca;professeur;Eugene Syriani
-  - M001;Oussama;Sghaier;4389263336;oussama.ben.sghaier@iro.umontreal.ca;doctorat;Houari Sahraoui
-  - M002;Mouna;Dhaouadi;4389672391;mouna.dhaouadi@umontreal.ca;doctorat;Eugene Syriani
-  - M003;Martin;Weyssow;5148936934;martin.weyssow@umontreal.ca;doctorat;Houari Sahraoui
-  - M004;Mohammadamin;Zaheri;5148240022;MohammadAmin.Zaheri@umontreal.ca;doctorat;Eugene Syriani
-  - M005;Istvan;David;4380279389;istvan.david@umontreal.ca;doctorat;Eugene Syriani
-- Compte (membre;adresse courriel;mot de passe;statut;role)
-  - Oussama Sghaier;oussama.ben.sghaier@iro.umontreal.ca;111;valide;membre
-  - Mouna Dhaouadi;MohammadAmin.Zaheri@umontreal.ca;8696;valide;membre
-  - Martin Weyssow;martin.weyssow@umontreal.ca;7654;enAttente;membre
-  - Mohammadamin Zaheri;MohammadAmin.Zaheri@umontreal.ca;7897962;enAttente;membre
-  - Istvan David;istvan.david@umontreal.ca;35779;suspendu;membre
-  - Houari Sahraoui;sahraoui@iro.umontreal.ca;687846;valide;superviseur
-  - Eugene Syriani;syriani@iro.umontreal.ca;6902342;valide;superviseur
-  - Louis-Edouard Lafontant;louis.edouard.lafontant@umontreal.ca;78203;valide;administrateur
+
 ### Connexion
 
-Pour se connecter Ã  l'application, veuillez utiliser un des identifiants suivants:
+Pour se connecter à l'application, veuillez utiliser un des identifiants suivants:
 
-- RÃ´le du membre
-  - email: jessie.galasso-carbonnel@umontreal.ca | password: jessie#pass | statut: VALIDE
-  - email: oussama.ben.sghaier@umontreal.ca | password: oussama#pass | statut: VALIDE
-  - email: aurelien.ducoin@umontreal.ca | password: aurelien#pass | statut: SUSPENDU
-  - email: meriem.ben.chaaben@umontreal.ca | password: meriem#pass | statut: EN_ATTENTE
-- RÃ´le du supervisuer
-  - email: syriani@iro.umontreal.ca | password: syriani#pass | statut: VALIDE
-  - email: sahraouh@iro.umontreal.ca | password: sahraouh#pass | statut: EN_ATTENTE
-- RÃ´le de l'administrateur
-  - email: louis.edouard.lafontant@umontreal.ca | password: lelafontant#pass | statut: VALIDE
+- Rôle du membre
+  - email: oussama.ben.sghaier@iro.umontreal.ca | password: 111 | statut: VALIDE
+  - email: mouna.dhaouadi@umontreal.ca | password: 8696 | statut: VALIDE
+  - email: martin.weyssow@umontreal.ca | password: 7654 | statut: EN_ATTENTE
+  - email: mohammadAmin.zaheri@umontreal.ca | password: 7897962 | statut: EN_ATTENTE
+  - email: istvan.david@umontreal.ca | password: 35779 | statut: SUSPENDU
+- Rôle du supervisuer
+  - email: sahraoui@iro.umontreal.ca | password: 687846 | statut: VALIDE
+  - email: syriani@iro.umontreal.ca | password: 6902342 | statut: VALIDE
+- Rôle de l'administrateur
+  - email: louis.edouard.lafontant@umontreal.ca | password: 78203 | statut: VALIDE
 
 ### Menu principal (Membre)
 

@@ -80,7 +80,7 @@ Pour se connecter à l'application, veuillez utiliser un des identifiants suivan
 - Rôle de l'administrateur
   - email: louis.edouard.lafontant@umontreal.ca | password: 78203 | statut: VALIDE
 
-### Menu principal (Membre)
+### Menu principal
 
 À partir du menu principal, dans le rôle du membre, vous pouvez choisir l'une des options suivantes en tapant le chiffre correspondant.
 
@@ -95,10 +95,10 @@ Pour se connecter à l'application, veuillez utiliser un des identifiants suivan
 - [9] Fonction spéciale: Pour le superviseur et l'administrateur.
 - [0] Quitter
 
-#### Gestion de mes activitÃ©s
+#### Gestion de mes activités
 
-Dans cette section, vous pouvez accÃ©der Ã  vos activitÃ©s en cours et passÃ©es, et en crÃ©er de nouvelles.
-Suivez les instructions Ã  l'Ã©cran pour complÃ©ter la tache.
+Dans cette section, vous pouvez accéder à vos activités en cours et passées, et en créer de nouvelles.
+Suivez les instructions à l'écran pour compléter la tache.
 
 - [a1] Créer un article | [a2] Modifier un article | [a3] Supprimer un article
 - [o1] Créer un outil | [o2] Modifier un outil | [o3] Supprimer un outil
